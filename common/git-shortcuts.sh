@@ -2,6 +2,7 @@
 alias gs='git status; git submodule status'
 alias ga='git add'
 # alias gc='git commit -m'    (See function below)
+alias gca='git commit -am'
 alias gp='git pull $* && git push $*'
 alias gull='git pull'
 alias gush='git push'
@@ -18,6 +19,7 @@ alias grmall="gs | grep 'deleted:' | awk '{print \$3}' | xargs git rm -f"
 alias s='gs'
 alias a='ga'
 alias c='gc'
+alias ca='gca'
 alias u='gull'
 alias p='gush'
 alias g='gl'
