@@ -1,5 +1,5 @@
 # All possible system-wide "bin" paths
-export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d ~/bin ] ; then

@@ -26,6 +26,13 @@ export HISTCONTROL=ignoredups
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# Must set this option, else script will not expand aliases.
+#shopt -s expand_aliases
+
+# be verbose very verbose
+#shopt -v
+
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
 

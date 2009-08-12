@@ -1,10 +1,7 @@
-export ASYNC_EDITOR="mate" 
-export EDITOR="mate -w" 
-export CVSEDITOR="mate -w" 
-export SVN_EDITOR="mate -w"
+export ASYNC_EDITOR="nano" 
+export EDITOR="nano -w" 
+export CVSEDITOR="nano -w" 
+export SVN_EDITOR="nano -w"
 
 # common typos
-alias mt='mate'
-alias amte='mate'
-alias atme='mate'
-alias mate.='mate .'
+alias pico='nano -w'
