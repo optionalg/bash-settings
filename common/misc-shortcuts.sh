@@ -2,6 +2,14 @@
 # You may uncomment the following lines if you want `ls' to be colorized:
 eval "`dircolors`"
 
+# colors for ls, etc.  Prefer ~/.dir_colors #64489
+if [[ -f ~/.dir_colors ]]; then
+        eval `dircolors -b ~/.dir_colors`
+else
+        eval `dircolors -b /etc/DIR_COLORS`
+fi
+alias ls="ls --color=auto"
+
 alias l="ls"
 alias lsd="ls -d"
 alias la="ls -la"
