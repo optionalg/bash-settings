@@ -2,6 +2,11 @@
 # You may uncomment the following lines if you want `ls' to be colorized:
 eval "`dircolors`"
 
+alias l="ls"
+alias lsd="ls -d"
+alias la="ls -la"
+alias ll="ls -l"
+
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -lh'
 alias l='ls $LS_OPTIONS -lhA'
@@ -19,6 +24,13 @@ alias zxvf="tar zxvf "
 
 
 alias g?="grep \$1"
+alias g="grep"
+alias G="g"
+
+
+alias t="tail -f "
+
+
 
 # what distro is gems?
 #alias rake?="rake -T | g? \$1"
@@ -27,4 +39,13 @@ alias g?="grep \$1"
 #alias mgem="cd \$GEMS; mate \$1"
 
 alias cls='clear'
+
+# quick network connectivity testing
+alias fuck="traceroute 24.24.24.24"
+alias shit="traceroute 23.23.23.23"
+
+## df and di the way I like it
+alias df="df -h"
+alias di="di -d h"
+
 
