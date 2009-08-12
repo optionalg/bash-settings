@@ -19,6 +19,7 @@ alias cd..='cd ..'
 alias cp="cp -i"
 alias mv="mv -i"
 
+# tar aliases
 alias tgz="tar -cvzf "
 alias zxvf="tar zxvf "
 
@@ -27,6 +28,9 @@ alias g?="grep \$1"
 alias g="grep"
 alias G="g"
 
+## search the current aliases for STRING
+### drops last character of string, not sure why
+alias ag="eecho \"alias grep searching\" && alias | grep "
 
 alias t="tail -f "
 
@@ -48,4 +52,6 @@ alias shit="traceroute 23.23.23.23"
 alias df="df -h"
 alias di="di -d h"
 
+## -w breaks on mac
+##alias netstat='netstat -tuw'
 

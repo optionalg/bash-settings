@@ -39,3 +39,14 @@ alias eclean-dist="$NOT_ROOT eclean-dist"
 alias eclean-pkg="$NOT_ROOT eclean-pkg"
 
 
+alias messages="$NOT_ROOT tail -f  /var/log/mail.{err,info,log} /var/log/denyhosts  /var/log/http-replicator.log /var/log/messages /var/log/*log"
+
+## daemons
+alias alog="$NOT_ROOT tail -f /var/log/apache*/*log"
+alias namedlog="$NOT_ROOT tail -f /var/log/named/*log"
+
+
+
+alias fixeth0="$NOT_ROOT /etc/init.d/net.eth0 restart"
+alias fixeth1="$NOT_ROOT /etc/init.d/net.eth1 restart"
+

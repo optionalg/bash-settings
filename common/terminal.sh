@@ -52,3 +52,19 @@ if [ $NOCOLOR = false ]; then
 else
         alias eecho='echo -ne "\e[1;34m>\e[1;36m>\e[1;35m>\e[0m "; echo "$*" '
 fi
+
+
+# figure out if this is being sourced by root
+NOT_ROOT=""
+ROOT_UID=0 # uid of root
+if [ "$UID" -ne "$ROOT_UID" ]
+then
+        eecho "~/.bash_aliases sourced by $USER"
+        NOT_ROOT="sudo"
+        # make s- act like sudo with bash completetion
+##        complete -F _root_command $filenames s-
+else
+        eecho "~/.bash_aliases sourced by $USER"
+fi
+
+
