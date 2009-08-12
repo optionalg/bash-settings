@@ -1,5 +1,5 @@
 # Usage:
-#   echo ". ~/.bash/desktop.sh" > ~/.bash_login
+#   echo ". ~/.bash/desktop.sh" >> ~/.bash_login
 
 dir=`dirname $BASH_SOURCE`
 

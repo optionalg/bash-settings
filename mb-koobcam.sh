@@ -1,5 +1,5 @@
 # Usage:
-#   echo ". ~/.bash/mb-koobcam.sh" > ~/.bash_login
+#   echo ". ~/.bash/mb-koobcam.sh" >> ~/.bash_login
 
 dir=`dirname $BASH_SOURCE`
 

@@ -1,6 +1,7 @@
 ## colors for ls
 if [[ `uname` != 'Darwin' ]]; then
 # not darwin color
+# possibly linux
 ### dircolors
 
 #### check to see if it exists and is executable
@@ -14,7 +15,7 @@ if [[ -x `which dircolors` ]]; then
 	fi
 	# GNU dir colors
 	
-	LS_OPTIONS="${LS_OPTIONS} -A --color=auto"
+	LS_OPTIONS="${LS_OPTIONS} --time-style=long -A --color=auto"
 ##	alias ls="ls --color=auto"
 fi
 
@@ -49,7 +50,8 @@ alias zxvf="tar zxvf "
 
 alias g?="grep \$1"
 alias g="grep"
-alias G="g"
+alias G?="grep \$1"
+alias G="grep"
 
 ## search the current aliases for STRING
 ### drops last character of string, not sure why
@@ -83,4 +85,11 @@ alias indent="indent -sob -bad -bap -bbb -bl -bli0 -nce -cli4 -cbi4 -ss -npcs -n
 
 # writes "notes" to the desktop (possibly dangerous)
 alias nn="echo creating new note; read $newnote ; touch '~/Desktop/$newnote' "
+
+# aliased in time
+alias utime="date +%s"
+alias date="date '+%F %r %Z'"
+
+alias rdesktop='rdesktop -b -N -a 24'
+
 

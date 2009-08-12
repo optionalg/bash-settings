@@ -1,5 +1,5 @@
 # Usage:
-#   echo ". ~/.bash/mbp-pierlocopter.sh" > ~/.bash_login
+#   echo ". ~/.bash/mbp-pierlocopter.sh" >> ~/.bash_login
 
 dir=`dirname $BASH_SOURCE`
 
