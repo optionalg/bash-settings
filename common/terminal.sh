@@ -36,6 +36,10 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
 
+alias less='less -r'
+alias more='less -r'  #less is more :)
+
+
 # Grep history
 function h() {
   history | grep "$1"
