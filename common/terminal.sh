@@ -36,6 +36,7 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
 
+alias ess='less -r'
 alias less='less -r'
 alias more='less -r'  #less is more :)
 
