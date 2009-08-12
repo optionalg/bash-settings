@@ -18,6 +18,8 @@ dir=`dirname $BASH_SOURCE`
 . $dir/desktop/work.sh
 
 . $dir/common/git.sh
+. $dir/common/mac.sh
+
 
 alias rc='cd ~/.bash; $EDITOR ; source ~/.bash_login'
 alias f5='source ~/.bash_login'

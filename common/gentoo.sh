@@ -68,3 +68,13 @@ alias tor.init="$NOT_ROOT /etc/init.d/tor"
 alias privoxy.init="$NOT_ROOT /etc/init.d/privoxy"
 alias iptables.init="$NOT_ROOT /etc/init.d/iptables"
 
+
+
+
+
+# for linux boxen
+# uncomment the following to activate bash-completion:
+[[ -f /etc/profile.d/bash-completion ]] && source /etc/profile.d/bash-completion
+[[ -f /etc/profile.d/bash-completion.sh ]] && source /etc/profile.d/bash-completion.sh
+
+
