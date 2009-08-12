@@ -7,6 +7,7 @@ dir=`dirname $BASH_SOURCE`
 . $dir/common/path.sh
 . $dir/common/misc-env.sh
 . $dir/common/misc-shortcuts.sh
+. $dir/common/ssh.sh
 
 . $dir/common/linux.sh
 . $dir/common/lvm.sh
@@ -17,7 +18,6 @@ dir=`dirname $BASH_SOURCE`
 . $dir/server/range.sh
 . $dir/server/misc.sh
 
-. $dir/server/ssh.sh
 . $dir/server/editors.sh
 . $dir/server/ejabber.sh 
 
