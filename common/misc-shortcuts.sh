@@ -10,8 +10,14 @@ alias l?="l | g? \$1"
 alias ..='cd ..'
 alias cd..='cd ..'
 
+
+alias cp="cp -i"
+alias mv="mv -i"
+
 alias tgz="tar -cvzf "
 alias zxvf="tar zxvf "
+
+
 alias g?="grep \$1"
 
 # what distro is gems?
@@ -19,3 +25,6 @@ alias g?="grep \$1"
 #alias gem?="gem list | g? \$1"
 
 #alias mgem="cd \$GEMS; mate \$1"
+
+alias cls='clear'
+
