@@ -1,4 +1,6 @@
+if [[ `uname` != 'Darwin' ]]; then
 
+### dircolors
 # You may uncomment the following lines if you want `ls' to be colorized:
 eval "`dircolors`"
 
@@ -8,7 +10,12 @@ if [[ -f ~/.dir_colors ]]; then
 else
         eval `dircolors -b /etc/DIR_COLORS`
 fi
+
+##
 alias ls="ls --color=auto"
+
+fi
+
 
 alias l="ls"
 alias lsd="ls -d"

@@ -14,7 +14,6 @@ dir=`dirname $BASH_SOURCE`
 . $dir/desktop/path.sh
 . $dir/desktop/misc-env.sh
 . $dir/desktop/editors.sh
-. $dir/desktop/flash-log.sh
 . $dir/desktop/work.sh
 
 . $dir/common/git.sh
