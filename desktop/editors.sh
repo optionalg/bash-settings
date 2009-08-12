@@ -5,3 +5,4 @@ export SVN_EDITOR="nano -w"
 
 # common typos
 alias pico='nano -w'
+alias e='nano -w'
