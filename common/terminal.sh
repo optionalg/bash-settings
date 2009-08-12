@@ -40,3 +40,11 @@ shopt -s checkwinsize
 function h() {
   history | grep "$1"
 }
+
+
+NOCOLOR=0
+if [ $NOCOLOR = false ]; then
+        alias eecho="echo -n '\>\>'; echo '$*' "
+else
+        alias eecho='echo -ne "\e[1;34m>\e[1;36m>\e[1;35m>\e[0m "; echo "$*" '
+fi
