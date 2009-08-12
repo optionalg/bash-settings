@@ -60,12 +60,12 @@ NOT_ROOT=""
 ROOT_UID=0 # uid of root
 if [ "$UID" -ne "$ROOT_UID" ]
 then
-        eecho "~/.bash_aliases sourced by $USER"
+        eecho "~/.bash/ sourced by $USER"
         NOT_ROOT="sudo"
         # make s- act like sudo with bash completetion
 ##        complete -F _root_command $filenames s-
 else
-        eecho "~/.bash_aliases sourced by $USER"
+        eecho "~/.bash/ sourced by $USER"
 fi
 
 
