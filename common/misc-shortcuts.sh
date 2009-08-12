@@ -66,3 +66,6 @@ alias di="di -d h"
 # indent files
 alias indent="indent -sob -bad -bap -bbb -bl -bli0 -nce -cli4 -cbi4 -ss -npcs -nprs -npsl -i4 -lp -nut -fc1 -c45 -nsob "
 
+# writes "notes" to the desktop (possibly dangerous)
+alias nn="echo creating new note; read $newnote ; touch '~/Desktop/$newnote' "
+
