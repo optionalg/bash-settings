@@ -1,30 +1,38 @@
+## colors for ls
 if [[ `uname` != 'Darwin' ]]; then
-
+# not darwin color
 ### dircolors
-# You may uncomment the following lines if you want `ls' to be colorized:
-eval "`dircolors`"
 
-# colors for ls, etc.  Prefer ~/.dir_colors #64489
-if [[ -f ~/.dir_colors ]]; then
-        eval `dircolors -b ~/.dir_colors`
-else
-        eval `dircolors -b /etc/DIR_COLORS`
+#### check to see if it exists and is executable
+### dircolors
+if [[ -x `which dircolors` ]]; then
+	# colors for ls, etc.  Prefer ~/.dir_colors #64489
+	if [[ -f ~/.dir_colors ]]; then
+	        eval `dircolors -b ~/.dir_colors`
+	else
+	        eval `dircolors -b /etc/DIR_COLORS`
+	fi
+	# GNU dir colors
+	
+	LS_OPTIONS="${LS_OPTIONS} -A --color=auto"
+##	alias ls="ls --color=auto"
 fi
 
 ##
-alias ls="ls --color=auto"
+elif [[ `uname` == 'Darwin' ]]; then
+	LS_OPTIONS="${LS_OPTIONS} -G"
 
 fi
-
 
 alias l="ls"
 alias lsd="ls -d"
 alias la="ls -la"
 alias ll="ls -l"
 
+## -A breaks on Darwin
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -lh'
-alias l='ls $LS_OPTIONS -lhA'
+alias l='ls $LS_OPTIONS -lh'
 alias l?="l | g? \$1"
 
 alias ..='cd ..'
