@@ -11,6 +11,7 @@ dir=`dirname $BASH_SOURCE`
 
 . $dir/common/linux.sh
 . $dir/common/lvm.sh
+. $dir/common/mysql.sh
 
 . $dir/common/gentoo.sh
 . $dir/common/ftp.sh

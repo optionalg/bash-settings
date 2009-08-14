@@ -1,6 +1,9 @@
 
 alias envup="$NOT_ROOT env-update && source /etc/profile && source $HOME/.bashrc"
 
+## rebuild the basic toolset
+alias tooly="time sudo emerge --oneshot --ask --verbose --jobs 1 sys-devel/gcc-config virtual/libc sys-devel/binutils sys-devel/gcc sys-devel/libtool # libstdc++-v3"
+
 alias eselect="$NOT_ROOT eselect"
 alias emerge="$NOT_ROOT emerge"
 alias ebuild="$NOT_ROOT ebuild"
