@@ -4,4 +4,4 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 
-alias lampwatch="watch -n 30 'ps -ylC apache2,mysqld,varnishd,asterisk --sort:rss'"
+alias lampwatch="watch -n 30 'ps -ylC apache2,mysqld,varnishd,asterisk,bash --sort:rss'"
