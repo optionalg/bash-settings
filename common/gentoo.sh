@@ -1,6 +1,16 @@
 
 alias envup="$NOT_ROOT env-update && source /etc/profile && source $HOME/.bashrc"
 
+
+## glsa stuff
+# check your system for affected GLSAs
+alias glsa="glsa-check -t all"
+# pretend and see what would be merged
+alias glsa-see='glsa-check  -p $(glsa-check -t all)'
+# apply required fixes
+alias glsa-doit='glsa-check  -p $(glsa-check -t all)'
+
+
 ## rebuild the basic toolset
 alias tooly="time sudo emerge --oneshot --ask --verbose --jobs 1 sys-devel/gcc-config virtual/libc sys-devel/binutils sys-devel/gcc sys-devel/libtool # libstdc++-v3"
 
