@@ -4,3 +4,5 @@
     fi
 
 
+alias flushdns="dscacheutil -flushcache"
+
