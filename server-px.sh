@@ -1,6 +1,9 @@
 # Usage:
 #   echo ". ~/.bash/server.sh" >> ~/.bash_login
 
+## default PS1 on gentoo
+export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\]'
+
 dir=`dirname $BASH_SOURCE`
 
 . $dir/common/terminal.sh
