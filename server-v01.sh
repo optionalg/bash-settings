@@ -1,6 +1,9 @@
 # Usage:
 #   echo ". ~/.bash/server.sh" >> ~/.bash_login
 
+
+export PS1='\[\033[01;35m\]\u@\h\[\033[01;31m\] \w \[\033[01;34m\]\$\[\033[00m\] '
+
 dir=`dirname $BASH_SOURCE`
 
 . $dir/common/terminal.sh
