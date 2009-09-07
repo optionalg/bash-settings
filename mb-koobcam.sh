@@ -7,6 +7,11 @@ dir=`dirname $BASH_SOURCE`
 
 #export PS1='\[\033[0;37m\]\w\[\033[00m\] \$ ' # override PS1 to a simpler format
 
+# default
+#export PS1='\h:\W \u\$'
+
+export PS1="\[\e[0;31m\]\u@\h:\w\$ \[\e[1;30m\]"
+
 . $dir/common/path.sh
 . $dir/common/misc-env.sh
 . $dir/common/misc-shortcuts.sh

@@ -51,7 +51,7 @@ NOCOLOR=0
 if [ $NOCOLOR = false ]; then
         alias eecho="echo -n '\>\>'; echo '$*' "
 else
-        alias eecho='echo -ne "\e[1;34m>\e[1;36m>\e[1;35m>\e[0m "; echo "$*" '
+         alias eecho='echo -ne "\033[1;34m>\033[1;36m>\033[1;35m>\033[0m "; echo "$*" '
 fi
 
 
