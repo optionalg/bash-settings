@@ -97,3 +97,4 @@ alias date="date '+%F %r %Z'"
 alias rdesktop='rdesktop -b -N -a 24'
 
 
+alias sa=''
