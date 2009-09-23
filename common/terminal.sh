@@ -51,7 +51,8 @@ NOCOLOR=0
 if [ $NOCOLOR = false ]; then
         alias eecho="echo -n '\>\>'; echo '$*' "
 else
-         alias eecho='echo -ne "\033[1;34m>\033[1;36m>\033[1;35m>\033[0m "; echo "$*" '
+         alias eecho='echo -e "\033[1;34m>\033[1;36m>\033[1;35m>\033[0m $!"'
+#         alias eecho='echo -ne "\033[1;34m>\033[1;36m>\033[1;35m>\033[0m "; echo "$*" '
 fi
 
 
@@ -60,12 +61,13 @@ NOT_ROOT=""
 ROOT_UID=0 # uid of root
 if [ "$UID" -ne "$ROOT_UID" ]
 then
-        eecho "~/.bash/ sourced by $USER"
+#        eecho "~/.bash/ sourced by $USER"
         NOT_ROOT="sudo"
         # make s- act like sudo with bash completetion
 ##        complete -F _root_command $filenames s-
 else
-        eecho "~/.bash/ sourced by $USER"
+echo >/dev/null
+#        eecho "~/.bash/ sourced by $USER"
 fi
 
 
