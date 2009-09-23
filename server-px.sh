@@ -28,3 +28,5 @@ dir=`dirname $BASH_SOURCE`
 . $dir/common/git.sh
 
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
+
+alias bwwhois='/usr/bin/bwwhois'
