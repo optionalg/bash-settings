@@ -30,3 +30,4 @@ dir=`dirname $BASH_SOURCE`
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
 
 alias bwwhois='/usr/bin/bwwhois'
+alias bwwhois='bwwhois -s'
