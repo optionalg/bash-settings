@@ -4,7 +4,19 @@ HOW TO
   1. clone this repo to ~/.bash
   2. add the following line into ~/.bash_login (or .bashrc):
 
-[ -f ~/.bash/<configuration-name>.sh ] && source ~/.bash/<configuration-name>.sh
+if [[ `uname -s` == "Darwin" ]]; then
+        ## if my ~/.bash/mb$HOSTNAME file exists
+        [ -f ~/.bash/mb-`uname -n`.sh ] && source ~/.bash/mb-`uname -n`.sh
+        [ -f ~/.bash/mbp-`uname -n`.sh ] && source ~/.bash/mbp-`uname -n`.sh
+fi
+        
+if [[ `uname -s` == "Linux" ]]; then
+        ## if my ~/.bash/server-$HOSTNAME file exists
+        [ -f ~/.bash/server-`uname -n`.sh ] && source ~/.bash/server-`uname -n`.sh
+
+fi
+
+## [ -f ~/.bash/<configuration-name>.sh ] && source ~/.bash/<configuration-name>.sh
 
   3. reload the shell
 
