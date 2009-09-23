@@ -97,4 +97,4 @@ alias date="date '+%F %r %Z'"
 alias rdesktop='rdesktop -b -N -a 24'
 
 
-alias sa=''
+##alias sa='eecho "sourcing .bash" ; source ~/.bash/sourcing'
