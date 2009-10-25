@@ -96,5 +96,7 @@ alias date="date '+%F %r %Z'"
 
 alias rdesktop='rdesktop -b -N -a 24'
 
+alias bwwhois='bwwhois -s'
 
 alias sa='~/.bash/sourcing'
+
