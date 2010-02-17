@@ -14,6 +14,7 @@ fi
         
 if [[ `uname -s` == "Linux" ]]; then
         ## if my ~/.bash/server-$HOSTNAME file exists
+        [ -f ~/.bash/desktop-`uname -n`.sh ] && source ~/.bash/desktop-`uname -n`.sh
         [ -f ~/.bash/server-`uname -n`.sh ] && source ~/.bash/server-`uname -n`.sh
 
 fi
