@@ -3,6 +3,6 @@
         . /opt/local/etc/bash_completion
     fi
 
-
+# sweet easy to remember way to flush the dns cache on your mac
 alias flushdns="dscacheutil -flushcache"
 
