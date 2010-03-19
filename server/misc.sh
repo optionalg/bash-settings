@@ -12,3 +12,4 @@ alias lampwatch="watch -n 30 'ps -ylC apache2,mysqld,varnishd,asterisk,bash --so
 alias bwwhois="bwwhois -s"
 
 
+alias rndc='rndc -k /chroot/dns/etc/bind/rndc.key'
