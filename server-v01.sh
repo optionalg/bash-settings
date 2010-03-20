@@ -26,5 +26,6 @@ dir=`dirname $BASH_SOURCE`
 . $dir/server/ejabber.sh 
 
 . $dir/common/git.sh
+. $dir/common/git-shortcuts.sh
 
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
