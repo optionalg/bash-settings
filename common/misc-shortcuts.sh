@@ -38,7 +38,9 @@ alias l?="l | g? \$1"
 
 alias ..='cd ..'
 alias cd..='cd ..'
-
+alias cd-='cd -'
+## needs -- escape so we can use - as the alias name
+alias -- -="cd -"
 
 alias cp="cp -i"
 alias mv="mv -i"

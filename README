@@ -4,6 +4,13 @@ HOW TO
   1. clone this repo to ~/.bash
 	git clone git://github.com/px/bash-settings.git ~/.bash/
 
+	OR to your own Code directory
+
+	git clone git://github.com/px/bash-settings.git ~/tmp/Code/bash-settings/
+
+	cd ~/ ; ln -sf ~/tmp/Code/bash-settings/ .bash
+
+
   2. add the following lines into ~/.bash_login for Linux (or .bashrc or Mac):
 
 ### Cut #####
