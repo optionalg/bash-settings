@@ -1,3 +1,4 @@
+source common/terminal.sh
 ## colors for ls
 if [[ `uname` != 'Darwin' ]]; then
 # not darwin color
