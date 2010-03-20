@@ -4,21 +4,38 @@ HOW TO
   1. clone this repo to ~/.bash
 	git clone git://github.com/px/bash-settings.git ~/.bash/
 
-  2. add the following line into ~/.bash_login (or .bashrc):
+	OR to your own Code directory
 
-if [[ `uname -s` == "Darwin" ]]; then
-        ## if my ~/.bash/mb-$HOSTNAME file exists
-        [ -f ~/.bash/mb-`uname -n`.sh ] && source ~/.bash/mb-`uname -n`.sh
-        [ -f ~/.bash/mbp-`uname -n`.sh ] && source ~/.bash/mbp-`uname -n`.sh
+	git clone git://github.com/px/bash-settings.git ~/tmp/Code/bash-settings/
+
+	cd ~/ ; ln -sf ~/tmp/Code/bash-settings/ .bash
+
+
+  2. add the following lines into ~/.bash_login for Linux (or .bashrc or Mac):
+
+### Cut #####
+
+## set our system type
+mySystem=`uname -s`
+## set our local host name (eg. everything before the first period.)
+myName=`uname -n | cut -f1 -d.`
+
+if [[ $mySystem == "Darwin" ]]; then
+        ## if my ~/.bash/mb-$myName file exists
+        [ -f ~/.bash/mb-$myName.sh ] && source ~/.bash/mb-$myName.sh
+        [ -f ~/.bash/mbp-$myName.sh ] && source ~/.bash/mbp-$myName.sh
 fi
         
-if [[ `uname -s` == "Linux" ]]; then
-        ## if my ~/.bash/server-$HOSTNAME file exists
-        [ -f ~/.bash/server-`uname -n`.sh ] && source ~/.bash/server-`uname -n`.sh
+if [[ $mySystem  == "Linux" ]]; then
+        ## if my ~/.bash/server-$myName file exists
+        [ -f ~/.bash/desktop-$myName.sh ] && source ~/.bash/desktop-$myName.sh
+        [ -f ~/.bash/server-$myName.sh ] && source ~/.bash/server-$myName.sh
 
 fi
 
 ## [ -f ~/.bash/<configuration-name>.sh ] && source ~/.bash/<configuration-name>.sh
+### / Cut #####
+
 
   3. reload the shell
 

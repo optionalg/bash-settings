@@ -1,3 +1,8 @@
+#dir=`dirname $BASH_SOURCE`
+if [[ -f ./terminal.sh ]]; then 
+	source ./terminal.sh
+fi
+
 ## colors for ls
 if [[ `uname` != 'Darwin' ]]; then
 # not darwin color
@@ -38,7 +43,9 @@ alias l?="l | g? \$1"
 
 alias ..='cd ..'
 alias cd..='cd ..'
-
+alias cd-='cd -'
+## needs -- escape so we can use - as the alias name
+alias -- -="cd -"
 
 alias cp="cp -i"
 alias mv="mv -i"
@@ -96,5 +103,13 @@ alias date="date '+%F %r %Z'"
 
 alias rdesktop='rdesktop -b -N -a 24'
 
+alias bwwhois='bwwhois -s'
 
 alias sa='~/.bash/sourcing'
+
+alias psg="ps -efww| grep"
+
+#alias psp="ps -o ppid,pid,pri,nice,size,tty,time,pgid,sid,ruser,cmd"
+
+alias ppp="ps -o uid,pid,ppid,nice,c,stime,tty,time,cmd"
+

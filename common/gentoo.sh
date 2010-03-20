@@ -91,3 +91,6 @@ alias iptables.init="$NOT_ROOT /etc/init.d/iptables"
 [[ -f /etc/profile.d/bash-completion.sh ]] && source /etc/profile.d/bash-completion.sh
 
 
+# source in some extras
+[ -f ~/.gentoo/java-env ] && source ~/.gentoo/*-env
+

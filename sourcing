@@ -1,18 +1,27 @@
 #!/bin/sh
 
-source ~/.bash/common/terminal.sh
+
+source common/terminal.sh
+
 #set -x
+
+myName=`uname -n`
+mySystem=`uname -s`
+
+eecho ''
 eecho '(re-)sourcing your .bash/ configurations'
 
-if [[ `uname -s` == "Darwin" ]]; then
+if [[ $mySystem == "Darwin" ]]; then
+	eecho "System: Darwin"
         ## if my ~/.bash/mb$HOSTNAME file exists
-        [ -f ~/.bash/mb-`uname -n`.sh ] && source ~/.bash/mb-`uname -n`.sh
-        [ -f ~/.bash/mbp-`uname -n`.sh ] && source ~/.bash/mbp-`uname -n`.sh
+        [ -f ~/.bash/mb-$myName.sh ] && eecho "file: mb-$myName" && source ~/.bash/mb-$myName.sh
+        [ -f ~/.bash/mbp-$myName.sh ] && eecho "file: mbp-$myName" && source ~/.bash/mbp-$myName.sh
 fi
         
-if [[ `uname -s` == "Linux" ]]; then
+if [[ $mySystem == "Linux" ]]; then
+	eecho "System: Linux"
         ## if my ~/.bash/server-$HOSTNAME file exists
-        [ -f ~/.bash/server-`uname -n`.sh ] && source ~/.bash/server-`uname -n`.sh
+        [ -f ~/.bash/server-$myName.sh ] && eecho "file: server-$myName" && source ~/.bash/server-$myName.sh
 
 fi
 
