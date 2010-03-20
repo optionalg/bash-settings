@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-source ~/.bash/common/terminal.sh
+source common/terminal.sh
 
 #set -x
 
