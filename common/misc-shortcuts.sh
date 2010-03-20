@@ -1,4 +1,8 @@
-source common/terminal.sh
+#dir=`dirname $BASH_SOURCE`
+if [[ -f ./terminal.sh ]]; then 
+	source ./terminal.sh
+fi
+
 ## colors for ls
 if [[ `uname` != 'Darwin' ]]; then
 # not darwin color
