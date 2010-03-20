@@ -2,7 +2,7 @@
 alias gs='git status; git submodule status'
 alias ga='git add'
 # alias gc='git commit -m'    (See function below)
-alias gca='git commit -am'
+alias gca='git commit -a'
 alias gp='git pull $* && git push $*'
 alias gull='git pull'
 alias gush='git push'
