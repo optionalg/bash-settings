@@ -101,3 +101,8 @@ alias sa='~/.bash/sourcing'
 
 alias psg="ps -efww| grep"
 
+#alias psp="ps -o ppid,pid,pri,nice,size,tty,time,pgid,sid,ruser,cmd"
+
+alias ppp="ps -o uid,pid,ppid,nice,c,stime,tty,time,cmd"
+
+
