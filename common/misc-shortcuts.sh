@@ -98,3 +98,6 @@ alias rdesktop='rdesktop -b -N -a 24'
 
 
 alias sa='~/.bash/sourcing'
+
+alias psg="ps -efww| grep"
+
