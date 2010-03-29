@@ -78,7 +78,7 @@ alias cls='clear'
 
 # quick network connectivity testing
 alias fuck="traceroute 24.24.24.24"
-alias shit="traceroute 23.23.23.23"
+alias shit="traceroute 4.2.2.2"
 
 ## df and di the way I like it
 alias df="df -h"
