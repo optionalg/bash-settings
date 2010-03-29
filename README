@@ -11,7 +11,7 @@ HOW TO
 	cd ~/ ; ln -sf ~/tmp/Code/bash-settings/ .bash
 
 
-  2. add the following lines into ~/.bash_login for Linux (or .bashrc or Mac):
+  2. add the contents of "sourcing" or following lines into ~/.bash_login for Linux (or .bashrc or Mac):
 
 ### Cut #####
 
@@ -30,12 +30,10 @@ if [[ $mySystem  == "Linux" ]]; then
         ## if my ~/.bash/server-$myName file exists
         [ -f ~/.bash/desktop-$myName.sh ] && source ~/.bash/desktop-$myName.sh
         [ -f ~/.bash/server-$myName.sh ] && source ~/.bash/server-$myName.sh
-
 fi
 
 ## [ -f ~/.bash/<configuration-name>.sh ] && source ~/.bash/<configuration-name>.sh
 ### / Cut #####
-
 
   3. reload the shell
 

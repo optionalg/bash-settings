@@ -5,7 +5,8 @@ source common/terminal.sh
 
 #set -x
 
-myName=`uname -n`
+## set our local host name (eg. everything before the first period.)
+myName=`uname -n | cut -f1 -d.`
 mySystem=`uname -s`
 
 eecho ''
