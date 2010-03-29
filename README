@@ -1,39 +1,23 @@
-
 HOW TO
 
-  1. clone this repo to ~/.bash
+  1. Clone this repo:
 	git clone git://github.com/px/bash-settings.git ~/.bash/
 
-	OR to your own Code directory
+	# OR to your own Code directory
+
+	mkdir -p ~/tmp/Code/
 
 	git clone git://github.com/px/bash-settings.git ~/tmp/Code/bash-settings/
 
-	cd ~/ ; ln -sf ~/tmp/Code/bash-settings/ .bash
+	cd ~/ ; ln -sf ~/tmp/Code/bash-settings/ .bash ; ./.bash/sourcing
 
+  2. source or run "sourcing" from your ~/.bash_login for Linux (or ~/.bashrc or Mac):
 
-  2. add the contents of "sourcing" or following lines into ~/.bash_login for Linux (or .bashrc or Mac):
+	#source
+	source ~/.bash/sourcing
 
-### Cut #####
-
-## set our system type
-mySystem=`uname -s`
-## set our local host name (eg. everything before the first period.)
-myName=`uname -n | cut -f1 -d.`
-
-if [[ $mySystem == "Darwin" ]]; then
-        ## if my ~/.bash/mb-$myName file exists
-        [ -f ~/.bash/mb-$myName.sh ] && source ~/.bash/mb-$myName.sh
-        [ -f ~/.bash/mbp-$myName.sh ] && source ~/.bash/mbp-$myName.sh
-fi
-        
-if [[ $mySystem  == "Linux" ]]; then
-        ## if my ~/.bash/server-$myName file exists
-        [ -f ~/.bash/desktop-$myName.sh ] && source ~/.bash/desktop-$myName.sh
-        [ -f ~/.bash/server-$myName.sh ] && source ~/.bash/server-$myName.sh
-fi
-
-## [ -f ~/.bash/<configuration-name>.sh ] && source ~/.bash/<configuration-name>.sh
-### / Cut #####
+	# run
+	~/.bash/sourcing
 
   3. reload the shell
 
