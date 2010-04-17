@@ -47,8 +47,8 @@ alias cd-='cd -'
 ## needs -- escape so we can use - as the alias name
 alias -- -="cd -"
 
-alias cp="cp -i"
-alias mv="mv -i"
+alias cp="cp -pRPiv"
+alias mv="mv -iv"
 
 # tar aliases
 alias tgz="tar -cvzf "
