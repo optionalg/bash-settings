@@ -5,3 +5,10 @@ export PATH="$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin
 if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
+
+## check for depot_tools
+if [ -d ~/Code/depot_tools ]; then
+        export PATH=~/Code/depot_tools:"$PATH"
+fi
+
+
