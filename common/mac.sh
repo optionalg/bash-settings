@@ -8,3 +8,6 @@
 # sweet easy to remember way to flush the dns cache on your mac
 alias flushdns="dscacheutil -flushcache"
 
+if [ -d ~/Code/depot_tools ]; then
+	export PATH=~/Code/depot_tools:"$PATH"
+fi
