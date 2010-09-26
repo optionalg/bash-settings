@@ -13,4 +13,6 @@ dir=`dirname $BASH_SOURCE`
 
 . $dir/common/git.sh
 
+. $dir/hosts/hosts.sh
+
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
