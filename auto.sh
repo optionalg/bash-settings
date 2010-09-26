@@ -6,7 +6,7 @@
 # Here we check whether this shell is invoked by SSH and choose appropriate environment
 
 if [ -z "$SSH_TTY" ]; then # no ssh connection, assuming local shell
-  . ~/.bash/local.sh
+	. ~/.bash/local.sh
 else
 	. ~/.bash/remote.sh # connected by ssh
 fi
