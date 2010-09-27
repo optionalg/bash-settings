@@ -13,6 +13,8 @@ dir=`dirname $BASH_SOURCE`
 
 . $dir/common/git.sh
 
-. $dir/hosts/hosts.sh
+if [ -f $dir/hosts/hosts.sh ]; then
+    . $dir/hosts/hosts.sh
+fi
 
 test -r /sw/bin/init.sh && . /sw/bin/init.sh

@@ -20,6 +20,8 @@ export PS1='\[\033[0;37m\]\w\[\033[00m\] \$ ' # override PS1 to a simpler format
 . $dir/common/git.sh
 #. $dir/common/git-one-letter-aliases.sh
 
-. $dir/hosts/hosts.sh
+if [ -f $dir/hosts/hosts.sh ]; then
+    . $dir/hosts/hosts.sh
+fi
 
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
