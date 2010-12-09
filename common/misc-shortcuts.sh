@@ -79,7 +79,7 @@ alias cls='clear'
 # quick network connectivity testing
 alias fuck="traceroute 24.24.24.24"
 alias shit="traceroute 4.2.2.2"
-alias fml="ping 192.168.48.1"
+alias fml="ping `netstat -rn | awk '$2 !~ /127.0.0.1|0.0.0.0|-|IP|Gateway|:|link|tables/ {print $2}' | awk '$1' | uniq`"
 
 
 ## df and di the way I like it
