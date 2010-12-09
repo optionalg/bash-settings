@@ -15,6 +15,7 @@ export PS1='\[\033[01;33m\]\u@\h\[\033[01;31m\] \w \[\033[01;34m\]\$\[\033[00m\]
 . $dir/common/path.sh
 . $dir/common/misc-env.sh
 . $dir/common/misc-shortcuts.sh
+. $dir/common/x11.sh
 
 . $dir/desktop/path.sh
 . $dir/desktop/misc-env.sh
