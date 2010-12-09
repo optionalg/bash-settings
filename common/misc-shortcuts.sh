@@ -79,6 +79,8 @@ alias cls='clear'
 # quick network connectivity testing
 alias fuck="traceroute 24.24.24.24"
 alias shit="traceroute 4.2.2.2"
+alias fml="ping 192.168.48.1"
+
 
 ## df and di the way I like it
 alias df="df -h"
