@@ -25,6 +25,7 @@ export PS1='\[\033[01;33m\]\u@\h\[\033[01;31m\] \w \[\033[01;34m\]\$\[\033[00m\]
 . $dir/common/git.sh
 . $dir/common/mac.sh
 
+. $dir/common/android-dev.sh
 
 alias rc='cd ~/.bash; $EDITOR ; source ~/.bash_login'
 alias f5='source ~/.bash_login'

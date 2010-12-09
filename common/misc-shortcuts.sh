@@ -88,7 +88,7 @@ alias di="di -d h"
 ##alias netstat='netstat -tuw'
 
 # indent files
-alias indent="indent -sob -bad -bap -bbb -bl -bli0 -nce -cli4 -cbi4 -ss -npcs -nprs -npsl -i4 -lp -nut -fc1 -c45 -nsob "
+alias indent="indent -sob -bad -bap -bbb -bl -bli0 -nce -cli4 -npcs -npsl -i4 -lp -fc1 -c45 -nsob "
 
 # rename all files in the current working directory to lower
 alias tolower="for i in * ; do mv $i $(echo $i | tr [:upper:] [:lower:] ) ; done"
