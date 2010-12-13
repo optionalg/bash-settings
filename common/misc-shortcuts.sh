@@ -3,6 +3,7 @@ if [[ -f ./terminal.sh ]]; then
 	source ./terminal.sh
 fi
 
+
 ## colors for ls
 if [[ `uname` != 'Darwin' ]]; then
 # not darwin color
@@ -30,6 +31,14 @@ elif [[ `uname` == 'Darwin' ]]; then
 
 fi
 
+
+
+if [[ -f ~/.bash/misc-local.sh ]]; then 
+	source ~/.bash/misc-local.sh
+fi
+
+
+### ls directory listings
 alias l="ls"
 alias lsd="ls -d"
 alias la="ls -la"
