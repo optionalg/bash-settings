@@ -121,4 +121,3 @@ alias psg="ps -efww| grep"
 
 alias ppp="ps -o uid,pid,ppid,nice,c,stime,tty,time,cmd"
 
-alias botnet="telnet v01d.vps.ns1.net 53090"

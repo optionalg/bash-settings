@@ -3,3 +3,7 @@
 #
 ##
 ###
+
+
+alias botnet="telnet v01d.vps.ns1.net 53090"
+
