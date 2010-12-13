@@ -74,11 +74,17 @@ alias t="tail -f "
 
 #alias mgem="cd \$GEMS; mate \$1"
 
+## clear the terminal console
 alias cls='clear'
 
-# quick network connectivity testing
+#
+#### quick network connectivity testing
+#
+## traceroute to a known routable ip address that you will never get to
 alias fuck="traceroute 24.24.24.24"
+## traceroute to a known good dns server
 alias shit="traceroute 4.2.2.2"
+## fml checks to see if you can ping your computers default route
 alias fml="ping `netstat -rn | awk '$2 !~ /127.0.0.1|0.0.0.0|-|IP|Gateway|:|link|tables/ {print $2}' | awk '$1' | uniq`"
 
 
