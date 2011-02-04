@@ -11,7 +11,7 @@ alias cd..='cd ..'
 
 alias tgz="tar -cvzf "
 alias zxvf="tar zxvf "
-alias g?="grep \$1"
+alias g?="grep $GREP_OPTIONS \$1"
 #alias rake?="rake -T | g? \$1"
 #alias gem?="gem list | g? \$1"
 
