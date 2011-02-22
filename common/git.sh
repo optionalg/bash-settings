@@ -1,4 +1,4 @@
-_dir=$dir 
+_dir=$dir
 dir=`dirname $BASH_SOURCE`
 
 . $dir/git-completion.sh
