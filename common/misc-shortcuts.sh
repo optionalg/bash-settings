@@ -98,8 +98,11 @@ TRACEROUTE="sudo `which mtr`"
 alias fuck="$TRACEROUTE 24.24.24.24"
 ## traceroute to a known good dns server
 alias shit="$TRACEROUTE 4.2.2.2"
-## fml checks to see if you can ping your computers default route
-#alias fml="ping `netstat -rn | awk '$2 !~ /127.0.0.1|0.0.0.0|-|IP|Gateway|:|link|tables/ {print $2}' | awk '$1' | uniq`"
+
+## traceroute to my precious
+alias damn="$TRACEROUTE ns1.net"
+
+## fml checks to see if you can ping your computers default route -- works on MacOSX/Linux
 alias fml="ping `netstat -rn | awk '/UG/{print $2}'`"
 
 ## df and di the way I like it
