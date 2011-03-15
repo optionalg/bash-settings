@@ -89,8 +89,8 @@ alias cls='clear'
 #
 #### quick network connectivity testing
 ## decide between mtr and traceroute, favoring the first
-TRACEROUTE=`which mtr`
-: ${TRACEROUTE:=`which mtr`} 
+TRACEROUTE="sudo `which mtr`"
+: ${TRACEROUTE:="sudo `which mtr`"} 
 : ${TRACEROUTE:=`which traceroute`} 
 
 #
