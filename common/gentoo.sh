@@ -30,7 +30,7 @@ RSYNC_CMD="rsync --delete -ave ssh"
 alias qwerty="emerge --deep --newuse --reinstall changed-use --update --verbose --tree --ask --complete-graph $*"
 #emerge --update --newuse --deep @world
 
-alias dirty="layman -S && eix-sync && qwerty world && dispatch-conf"
+alias dirty="eix-layman -S && eix-sync && qwerty @world && dispatch-conf"
 ###
 
 alias module-rebuild="$NOT_ROOT module-rebuild"
