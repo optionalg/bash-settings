@@ -14,3 +14,6 @@ alias flushdns="dscacheutil -flushcache"
 		. ~/Code/mactrash/trash
 	fi
 
+## install homebrew using ruby from Xcode3
+## https://github.com/mxcl/homebrew/wiki/installation
+alias homebrewInstall='ruby -e "$(curl -fsSLk https://gist.github.com/raw/323731/install_homebrew.rb)"'
