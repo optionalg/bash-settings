@@ -31,7 +31,7 @@ alias qwerty="emerge --deep --newuse --reinstall changed-use --update --verbose 
 #emerge --update --newuse --deep @world
 
 ## eix-layman is lame
-alias dirty="layman -S && eix-sync && qwerty @world && dispatch-conf"
+alias dirty="layman --verbose --sync-all && eix-sync && qwerty @world && dispatch-conf"
 ###
 
 alias module-rebuild="$NOT_ROOT module-rebuild"
