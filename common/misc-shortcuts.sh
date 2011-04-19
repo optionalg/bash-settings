@@ -138,3 +138,5 @@ alias psg="ps -efww| grep"
 
 alias ppp="ps -o uid,pid,ppid,nice,c,stime,tty,time,cmd"
 
+## close the cd tray
+alias close="eject -t"
