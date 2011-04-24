@@ -1,8 +1,23 @@
-# Git shortcuts
+##### Git shortcuts
+
+## neat status
 alias gs='git status; git submodule status'
+## quick git add
 alias ga='git add'
-# alias gc='git commit -m'    (See function below)
+
+##### quick commits
+## fancy, but needs a commit msg paramater. ex. gca "this is my commit"
+#alias gc='git commit -m'  #    (See function below) !!!! it's an actual function
+## commit and autostage files
 alias gca='git commit -a'
+## above and ammend previous commit
+alias gcaa='gca --amend'
+
+## magic add _ALL_ and commit
+alias gcaA='ga -A && gca'
+############## ^- see git-add for specs
+
+## moving stuff / file management
 alias gp='git pull $* && git push $*'
 alias gull='git pull'
 alias gush='git push'
