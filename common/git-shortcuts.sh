@@ -7,11 +7,7 @@ alias ga='git add'
 
 ##### quick commits
 ## fancy, but needs a commit msg paramater. ex. gca "this is my commit"
-<<<<<<< HEAD
 #alias gc='git commit -m'  #    (See function below) !!!! it's an actual function
-=======
-alias gc='git commit -m'  #    (See function below)
->>>>>>> f6c6df9c135b5887e322e7002e2339318bd33134
 ## commit and autostage files
 alias gca='git commit -a'
 ## above and ammend previous commit
