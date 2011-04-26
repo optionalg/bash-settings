@@ -138,3 +138,9 @@ alias psg="ps -efww| grep"
 
 alias ppp="ps -o uid,pid,ppid,nice,c,stime,tty,time,cmd"
 
+
+
+
+## cleanup .AppleDouble files
+#### don't nuke timemachine though!!!
+alias nukeDouble="find /srv -iregex \!TimeMachine -type d -name .AppleDouble -exec sudo rm -riv {} \;"
