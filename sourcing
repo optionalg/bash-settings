@@ -1,5 +1,9 @@
 #!/bin/sh
-
+###
+# include this file like this to activate .bash
+##
+# [[ -f ~/.bash/sourcing ]] && time source ~/.bash/sourcing
+##
 
 source ~/.bash/common/terminal.sh
 
