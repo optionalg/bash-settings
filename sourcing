@@ -19,14 +19,14 @@ eecho '(re-)sourcing your .bash/ configurations'
 if [[ $mySystem == "Darwin" ]]; then
 	eecho "System: Darwin"
         ## if my ~/.bash/mb$HOSTNAME file exists
-        [ -f ~/.bash/mb-$myName.sh ] && eecho "file: mb-$myName" && time source ~/.bash/mb-$myName.sh
-        [ -f ~/.bash/mbp-$myName.sh ] && eecho "file: mbp-$myName" && time source ~/.bash/mbp-$myName.sh
+        [ -f ~/.bash/mb-$myName.sh ] && eecho "file: mb-$myName" && source ~/.bash/mb-$myName.sh
+        [ -f ~/.bash/mbp-$myName.sh ] && eecho "file: mbp-$myName" && source ~/.bash/mbp-$myName.sh
 fi
         
 if [[ $mySystem == "Linux" ]]; then
 	eecho "System: Linux"
         ## if my ~/.bash/server-$HOSTNAME file exists
-        [ -f ~/.bash/server-$myName.sh ] && eecho "file: server-$myName" && time source ~/.bash/server-$myName.sh
+        [ -f ~/.bash/server-$myName.sh ] && eecho "file: server-$myName" && source ~/.bash/server-$myName.sh
 
 fi
 
