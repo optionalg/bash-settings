@@ -26,3 +26,5 @@ fi
 #To install Homebrew's own completion script:
 #  ln "/usr/local/Library/Contributions/brew_bash_completion.sh" "/usr/local/etc/bash_completion.d"
 
+# make top sort how i would like it
+alias top="top -o cpu -O rprvt"

@@ -103,7 +103,7 @@ alias shit="$TRACEROUTE 4.2.2.2"
 alias damn="$TRACEROUTE ns1.net"
 
 ## fml checks to see if you can ping your computers default route -- works on MacOSX/Linux
-alias fml="ping `netstat -rn | awk '/UG/{print $2} | uniq'`"
+alias fml="ping `netstat -rn | awk '/UG/{print $2}' | uniq`"
 
 ## df and di the way I like it
 alias df="df -h"
