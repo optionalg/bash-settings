@@ -144,3 +144,7 @@ alias close="eject -t"
 ## cleanup .AppleDouble files
 #### don't nuke timemachine though!!!
 alias nukeDouble="find /srv -iregex \!TimeMachine -type d -name .AppleDouble -exec sudo rm -riv {} \;"
+
+
+## number of lines contained in *.c *.cpp and *.h files, in a project directory
+alias lines="find . -name *.\[c\|h\]p? | xargs wc -l"
