@@ -16,6 +16,7 @@ export PS1='\[\033[0;37m\]\w\[\033[00m\] \$ ' # override PS1 to a simpler format
 
 . $dir/desktop/work.sh
 . $dir/desktop/aliases.sh
+. $dir/desktop/completions.sh
 
 . $dir/submodules.sh
 
