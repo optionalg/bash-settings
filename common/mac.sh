@@ -28,3 +28,7 @@ fi
 
 # make top sort how i would like it
 alias top="top -o cpu -O rprvt"
+
+
+unalias ps || alias ps="ps -axl"
+unalias psg || alias psg="ps -axl |grep "

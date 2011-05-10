@@ -63,7 +63,7 @@ alias messages="$NOT_ROOT tail -f  /var/log/mail.{err,info,log} /var/log/denyhos
 ## daemons
 alias alog="$NOT_ROOT tail -f /var/log/apache*/*log"
 alias namedlog="$NOT_ROOT tail -f /var/log/named/*log"
-
+alias clog="$NOT_ROOT tail -f /var/log/*log"
 
 
 alias fixeth0="$NOT_ROOT /etc/init.d/net.eth0 restart"
