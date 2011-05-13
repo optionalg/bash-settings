@@ -5,6 +5,7 @@ alias gc='git commit -m'
 alias gca='git commit -a -m'
 alias gull='git pull'
 alias gush='git push'
+alias gf='git fetch'
 alias gsh='git show'
 alias gl='git log'
 alias gb='git branch'
@@ -18,18 +19,16 @@ alias grmall="git status | grep 'deleted:' | awk '{print \$3}' | xargs git rm -f
 #git_shortcuts_dir=`dirname $BASH_SOURCE`
 #alias gitoneletteraliases=". $git_shortcuts_dir/git-one-letter-aliases.sh"
 
-
 # Git submodule shortcuts
-
 alias gsa='git submodule add'
 alias gsu='git submodule update --init'
 
 # Git svn shortcuts
-alias gf='git svn fetch'
-alias gfr='git svn fetch && git svn rebase'
-alias gdc='git svn dcommit'
-alias gnc='git svn fetch && git svn rebase && git svn dcommit'
-alias gcn='git svn fetch && git svn rebase && git svn dcommit'
+# alias gf='git svn fetch'
+# alias gfr='git svn fetch && git svn rebase'
+# alias gdc='git svn dcommit'
+# alias gnc='git svn fetch && git svn rebase && git svn dcommit'
+# alias gcn='git svn fetch && git svn rebase && git svn dcommit'
 
 # Usage:
 #   gc 'bug is fixed'                 # non-interactive mode

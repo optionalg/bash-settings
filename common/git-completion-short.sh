@@ -81,8 +81,15 @@ _gush()
   _git_short_complete push
 }
 
-complete -o bashdefault -o default -o nospace -F _gull gull 2>/dev/null \
-  || complete -o default -o nospace -F _gull gull
+_gf()
+{
+  _git_short_complete fetch
+}
+
+complete -o bashdefault -o default -o nospace -F _gf gf 2>/dev/null \
+  || complete -o default -o nospace -F _gf gf
+complete -o bashdefault -o default -o nospace -F _gush gush 2>/dev/null \
+  || complete -o default -o nospace -F _gush gush
 complete -o bashdefault -o default -o nospace -F _gush gush 2>/dev/null \
   || complete -o default -o nospace -F _gush gush
 complete -o bashdefault -o default -o nospace -F _git_checkout gco 2>/dev/null \
