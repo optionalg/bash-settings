@@ -94,3 +94,5 @@ complete -o bashdefault -o default -o nospace -F _gush gush 2>/dev/null \
   || complete -o default -o nospace -F _gush gush
 complete -o bashdefault -o default -o nospace -F _git_checkout gco 2>/dev/null \
   || complete -o default -o nospace -F _git_checkout gco
+complete -o bashdefault -o default -o nospace -F _git_log gl 2>/dev/null \
+  || complete -o default -o nospace -F _git_log gl
