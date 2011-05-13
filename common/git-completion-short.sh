@@ -96,3 +96,5 @@ complete -o bashdefault -o default -o nospace -F _git_checkout gco 2>/dev/null \
   || complete -o default -o nospace -F _git_checkout gco
 complete -o bashdefault -o default -o nospace -F _git_log gl 2>/dev/null \
   || complete -o default -o nospace -F _git_log gl
+complete -o bashdefault -o default -o nospace -F _git_merge gm 2>/dev/null \
+  || complete -o default -o nospace -F _git_merge gm
