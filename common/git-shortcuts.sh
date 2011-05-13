@@ -14,13 +14,15 @@ alias gca='git commit -a'
 alias gcaa='gca --amend'
 
 ## magic add _ALL_ and commit
-alias gcaA='ga -A && gca'
+alias gcaA='echo "magic commit! are you sure?(YES to continue)" ; read CHK ; if [ $CHK = "YES" ] ; then ga -A && gca ; fi'
 ############## ^- see git-add for specs
 
 ## moving stuff / file management
-alias gp='git pull $* && git push $*'
 alias gull='git pull'
 alias gush='git push'
+#alias gp='git pull && git push'
+alias gp='gull && gush'
+
 alias gsh='git show'
 alias gl='git log'
 alias gb='git branch'
@@ -31,6 +33,9 @@ alias glog='git log'
 alias gd1='echo "git diff HEAD";  git diff HEAD'
 alias gd2='echo "git diff HEAD^"; git diff HEAD^'
 alias grmall="gs | grep 'deleted:' | awk '{print \$3}' | xargs git rm -f"
+
+## simple push/pull on github
+alias githubpp=''
 
 # on my macbook pro only 'h', 'l', 'w', 'x' are reserved
 alias s='gs'
