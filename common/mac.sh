@@ -30,5 +30,5 @@ fi
 alias top="top -o cpu -O rprvt"
 
 
-unalias ps || alias ps="ps -axl"
-unalias psg || alias psg="ps -axl |grep "
+unalias ps 2>/dev/null || alias ps="ps -axl"
+unalias psg 2>/dev/null || alias psg="ps -axl |grep "
