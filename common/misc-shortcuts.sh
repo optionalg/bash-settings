@@ -100,7 +100,7 @@ alias fuck="$TRACEROUTE 24.24.24.24"
 alias shit="$TRACEROUTE 4.2.2.2"
 
 ## traceroute to my precious
-alias damn="$TRACEROUTE ns1.net"
+alias damn="$TRACEROUTE sip.ns1.net"
 
 ## fml checks to see if you can ping your computers default route -- works on MacOSX/Linux
 alias fml="ping `netstat -rn | awk '/UG/{print $2}' | uniq`"
