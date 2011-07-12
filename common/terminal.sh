@@ -1,6 +1,6 @@
 ## Set our name and sytem type for later.
-myName=`uname -n`
-mySystem=`uname -s`
+myName=$(uname -n)
+mySystem=$(uname -s)
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -54,10 +54,10 @@ NOCOLOR=0
 if [ $NOCOLOR == false ]; then
         alias eecho="echo -n '\>\>'; echo '$*' "
 else
-	if [[ $mySystem != "Darwin" ]]; then
-        	 alias eecho='echo -e "\033[1;34m>\033[1;36m>\033[1;35m>\033[0m $!"'
-	else
-        	 alias eecho='echo "\033[1;34m>\033[1;36m>\033[1;35m>\033[0m $!"'
+	if [[ $mySystem == "Darwin" ]]; then
+        	 alias eecho='echo -e "\033[1;34m>\033[1;36m>\033[1;35m>\033[0m ${*}"'
+	elif [[ $mySystem == "Linux" ]]; then
+        	 alias eecho='echo -e "\033[1;34m>\033[1;36m>\033[1;35m>\033[0m ${*}"'
 	fi
 #         alias eecho='echo -ne "\033[1;34m>\033[1;36m>\033[1;35m>\033[0m "; echo "$*" '
 fi
