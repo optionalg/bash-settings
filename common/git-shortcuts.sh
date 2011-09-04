@@ -1,5 +1,9 @@
 ##### Git shortcuts
 
+# trying out 'hub'
+alias git=hub
+
+
 ## neat status
 alias gs='git status; git submodule status'
 ## quick git add
