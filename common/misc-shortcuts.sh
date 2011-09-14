@@ -14,3 +14,4 @@ alias g?="grep $GREP_OPTIONS \$1"
 alias rake?="rake -T | g? \$1"
 alias gem?="gem list | g? \$1"
 
+alias be="bundle exec"
