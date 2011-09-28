@@ -9,6 +9,9 @@
 # sweet easy to remember way to flush the dns cache on your mac
 alias flushdns="dscacheutil -flushcache"
 
+
+## mactrash provides alias rm='del'
+## it also provides emptytrash
 ## include our copy of mactrash
 	if [ -f ~/Code/mactrash/trash ]; then
 		. ~/Code/mactrash/trash
