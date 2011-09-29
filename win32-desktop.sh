@@ -13,14 +13,14 @@ dir=`dirname $BASH_SOURCE`
 export PS1='\[\033[01;33m\]\u@\h\[\033[01;31m\] \w \[\033[01;34m\]\$\[\033[00m\] '
 #export PS1="\[\e[0;31m\]\u@\h:\w\$ \[\e[1;30m\]"
 
-. $dir/common/path.sh
-. $dir/common/misc-env.sh
+#. $dir/common/path.sh
+#. $dir/common/misc-env.sh
 . $dir/common/misc-shortcuts.sh
 #. $dir/common/x11.sh
 
-. $dir/desktop/path.sh
+#. $dir/desktop/path.sh
 . $dir/desktop/misc-env.sh
-. $dir/desktop/editors.sh
+#. $dir/desktop/editors.sh
 . $dir/desktop/work.sh
 
 . $dir/common/git.sh
