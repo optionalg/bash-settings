@@ -1,3 +1,5 @@
+#!/bin/echo "This file is meant to be sourced from the command or .bashrc"
+
 
 alias envup="$NOT_ROOT env-update && source /etc/profile && source $HOME/.bashrc"
 

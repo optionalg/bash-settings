@@ -1,3 +1,6 @@
+#!/bin/echo "This file is meant to be sourced from the command or .bashrc"
+
+
 # All possible system-wide "bin" paths
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/sbin:/usr/sbin:$PATH"
 

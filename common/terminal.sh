@@ -1,4 +1,6 @@
-#!/bin/echo "This file is meanto to be sourced"
+#!/bin/echo "This file is meant to be sourced from the command or .bashrc"
+
+
 ## Set our name and sytem type for later.
 myName=$(uname -n)
 mySystem=$(uname -s)
