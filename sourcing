@@ -5,10 +5,10 @@
 # [[ -f ~/.bash/sourcing ]] && time source ~/.bash/sourcing
 ##
 
-source ~/.bash/common/terminal.sh
 
+#source ~/.bash/common/terminal.sh
 #set -x
-
+alias eecho="echo"
 ## set our local host name (eg. everything before the first period.)
 myName=$(uname -n | cut -f1 -d.)
 mySystem=$(uname -s)
