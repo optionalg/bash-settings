@@ -1,9 +1,9 @@
-## HOW TO
+# HOW TO
 
-  1. Clone this repo:
+###  1. Clone this repo:
 	git clone git://github.com/px/bash-settings.git ~/.bash/
 
-	# OR to your own Code directory
+	#### OR to your own Code directory
 
 	`mkdir -p ~/tmp/Code/`
 
@@ -11,7 +11,7 @@
 
 	`cd ~/ ; ln -sf ~/tmp/Code/bash-settings/ .bash ; ./.bash/sourcing`
 
-  2. source or run "sourcing" from your ~/.bash_login for Linux (or ~/.bashrc or Mac):
+###  2. source or run "sourcing" from your ~/.bash_login for Linux (or ~/.bashrc or Mac):
 
 	##source from .bashrc
 	`[ -f ~/.bash/sourcing ] && . ./.bash/sourcing`
@@ -19,7 +19,7 @@
 	##source from command line
 	`. ~/.bash/sourcing`
 
-  3. reload the shell
+###  3. reload the shell
 
 ## DIRECTORY STRUCTURE
 
@@ -28,4 +28,4 @@
   /desktop   # settings relevant to desktop computers (GNU/Linux or Mac OSX)
   /server    # settings relevant to servers (mostly Linux-related) 
 
-## Files are stored in UTF8
+# Files are stored in UTF8
