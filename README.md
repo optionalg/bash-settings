@@ -23,9 +23,9 @@
 
 ## DIRECTORY STRUCTURE
 
-  /*.sh      # particular configuration (my-server.sh, my-macbook.sh etc.)
-  /common    # environment-independant settings and aliases
-  /desktop   # settings relevant to desktop computers (GNU/Linux or Mac OSX)
-  /server    # settings relevant to servers (mostly Linux-related) 
+	  /*.sh      # particular configuration (my-server.sh, my-macbook.sh etc.)
+	  /common    # environment-independant settings and aliases
+	  /desktop   # settings relevant to desktop computers (GNU/Linux or Mac OSX)
+	  /server    # settings relevant to servers (mostly Linux-related) 
 
 # Files are stored in UTF8
