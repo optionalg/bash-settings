@@ -5,19 +5,19 @@
 
 	#### OR to your own Code directory
 
-	`mkdir -p ~/tmp/Code/`
+	mkdir -p ~/tmp/Code/
 
-	`git clone git://github.com/px/bash-settings.git ~/tmp/Code/bash-settings/`
+	git clone git://github.com/px/bash-settings.git ~/tmp/Code/bash-settings/
 
-	`cd ~/ ; ln -sf ~/tmp/Code/bash-settings/ .bash ; ./.bash/sourcing`
+	cd ~/ ; ln -sf ~/tmp/Code/bash-settings/ .bash ; ./.bash/sourcing
 
 ###  2. source or run "sourcing" from your ~/.bash_login for Linux (or ~/.bashrc or Mac):
 
 	##source from .bashrc
-	`[ -f ~/.bash/sourcing ] && . ./.bash/sourcing`
+	[ -f ~/.bash/sourcing ] && . ./.bash/sourcing
 
 	##source from command line
-	`. ~/.bash/sourcing`
+	. ~/.bash/sourcing
 
 ###  3. reload the shell
 
