@@ -61,6 +61,7 @@ alias eclean-pkg="$NOT_ROOT eclean-pkg"
 alias messages="$NOT_ROOT tail -f  /var/log/mail.{err,info,log} /var/log/denyhosts  /var/log/http-replicator.log /var/log/messages /var/log/*log"
 
 ## daemons
+alias chlog="$NOT_ROOT tail -f /var/log/cherokee/*log"
 alias alog="$NOT_ROOT tail -f /var/log/apache*/*log"
 alias namedlog="$NOT_ROOT tail -f /var/log/named/*log"
 alias clog="$NOT_ROOT tail -f /var/log/cherokee/\${!}*log"
