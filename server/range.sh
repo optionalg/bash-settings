@@ -1,3 +1,5 @@
+#!/bin/echo "This file is meant to be sourced from the command or .bashrc"
+
 function range () { 
   if [ $1 -ge $2 ]; then 
     return 

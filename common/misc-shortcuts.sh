@@ -1,3 +1,6 @@
+#!/bin/echo "This file is meant to be sourced from the command or .bashrc"
+
+
 #dir=`dirname $BASH_SOURCE`
 if [[ -f ./terminal.sh ]]; then 
 	source ./terminal.sh

@@ -1,3 +1,5 @@
+#!/bin/echo "This file is meant to be sourced from the command or .bashrc"
+
 ## grep options
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR=36

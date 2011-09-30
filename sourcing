@@ -1,14 +1,14 @@
-#!/bin/sh
+#!/bin/echo "This file is meant to be sourced from the command or .bashrc"
 ###
 # include this file like this to activate .bash
 ##
 # [[ -f ~/.bash/sourcing ]] && time source ~/.bash/sourcing
 ##
 
-source ~/.bash/common/terminal.sh
 
+#source ~/.bash/common/terminal.sh
 #set -x
-
+alias eecho="echo"
 ## set our local host name (eg. everything before the first period.)
 myName=$(uname -n | cut -f1 -d.)
 mySystem=$(uname -s)
@@ -27,6 +27,15 @@ if [[ $mySystem == "Linux" ]]; then
 	eecho "System: Linux"
         ## if my ~/.bash/server-$HOSTNAME file exists
         [ -f ~/.bash/server-$myName.sh ] && eecho "file: server-$myName" && source ~/.bash/server-$myName.sh
+
+fi
+
+if [[ $mySystem == "MINGW32_NT-6.1" ]] ; then
+	eecho "System: MINGW32"
+
+	[ -f ~/.bash/win32-$myName.sh ] && eecho "file: win32-$myName" && source ~/.bash/win32-$myName.sh
+	[ -f ~/.bash/win32-desktop.sh ] && eecho "file: win32-desktop" && source ~/.bash/win32-desktop.sh
+
 
 fi
 

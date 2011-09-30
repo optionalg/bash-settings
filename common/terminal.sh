@@ -1,3 +1,6 @@
+#!/bin/echo "This file is meant to be sourced from the command or .bashrc"
+
+
 ## Set our name and sytem type for later.
 myName=$(uname -n)
 mySystem=$(uname -s)
@@ -50,6 +53,7 @@ function h() {
   history | grep "$1"
 }
 
+alias eecho="echo"
 NOCOLOR=0
 if [ $NOCOLOR == false ]; then
         alias eecho="echo -n '\>\>'; echo '$*' "
