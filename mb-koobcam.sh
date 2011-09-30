@@ -1,4 +1,7 @@
 #!/bin/echo "This file is meant to be sourced from the command or .bashrc"
+
+if [[ -n "$DOTBASH_DEBUG" ]] ; then echo "mb-koobcam.sh imported"; fi
+
 # Usage:
 #   echo ". ~/.bash/mb-koobcam.sh" >> ~/.bash_login
 

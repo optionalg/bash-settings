@@ -2,13 +2,25 @@
 ###
 # include this file like this to activate .bash
 ##
-# [[ -f ~/.bash/sourcing ]] && time source ~/.bash/sourcing
+## [[ -f ~/.bash/sourcing ]] && time source ~/.bash/sourcing
 ##
+
+###
+export DOTBASH_DEBUG=true
+if [[ -n "$DOTBASH_DEBUG" ]] ; then echo "sourcing imported"; fi
+
+### I want to make a more verbose source '.' function.
+### under time
+### it should check for existence
+### echo the file name
+###  source the file
+### time returns
+
 
 
 #source ~/.bash/common/terminal.sh
 #set -x
-alias eecho="echo"
+alias eecho="echo \>\>\> "
 ## set our local host name (eg. everything before the first period.)
 myName=$(uname -n | cut -f1 -d.)
 mySystem=$(uname -s)
@@ -39,3 +51,4 @@ if [[ $mySystem == "MINGW32_NT-6.1" ]] ; then
 
 fi
 
+eecho ''

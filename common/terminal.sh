@@ -1,5 +1,6 @@
 #!/bin/echo "This file is meant to be sourced from the command or .bashrc"
 
+if [[ -n "$DOTBASH_DEBUG" ]] ; then echo "common/terminal.sh imported"; fi
 
 ## Set our name and sytem type for later.
 myName=$(uname -n)

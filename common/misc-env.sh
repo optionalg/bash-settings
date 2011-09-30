@@ -1,5 +1,7 @@
 #!/bin/echo "This file is meant to be sourced from the command or .bashrc"
 
+if [[ -n "$DOTBASH_DEBUG" ]] ; then echo "common/misc-env.sh imported"; fi
+
 ## grep options
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR=36
