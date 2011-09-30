@@ -1,3 +1,4 @@
+#!/bin/echo "This file is meant to be sourced from the command or .bashrc"
 #
 # bash completion support for core Git.
 #

@@ -1,3 +1,5 @@
+#!/bin/echo "This file is meant to be sourced from the command or .bashrc"
+
 alias lvscan="$NOT_ROOT lvscan"
 alias lvchange="$NOT_ROOT lvchange"
 

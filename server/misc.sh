@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/echo "This file is meant to be sourced from the command or .bashrc"
 
 
 # set variable identifying the chroot you work in (used in the prompt below)

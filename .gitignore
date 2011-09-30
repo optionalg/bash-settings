@@ -1,2 +1,9 @@
 misc-local.sh
+.sourcing.swp
+
+.*.swp
+
+.~
+
+.*~
 

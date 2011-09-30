@@ -13,11 +13,11 @@ HOW TO
 
   2. source or run "sourcing" from your ~/.bash_login for Linux (or ~/.bashrc or Mac):
 
-	#source
-	source ~/.bash/sourcing
+	#source from .bashrc
+	[ -f ~/.bash/sourcing ] && . ./.bash/sourcing
 
-	# run
-	~/.bash/sourcing
+	#source from command line
+	. ~/.bash/sourcing
 
   3. reload the shell
 
