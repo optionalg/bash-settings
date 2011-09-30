@@ -9,6 +9,22 @@
 export DOTBASH_DEBUG=true
 if [[ -n "$DOTBASH_DEBUG" ]] ; then echo "sourcing imported"; fi
 
+
+
+alias eecho="echo"
+
+
+
+function zour {
+#  history | grep "$1"
+echo "passed $1"
+
+time ( [[ -f $PWD/$1 ]] && eecho "file: $1" && source $@ )
+## 
+#[[ -f $1 ]] && eecho "file: $1" && ls -la && source $@
+
+}
+
 ### I want to make a more verbose source '.' function.
 ### under time
 ### it should check for existence
@@ -31,7 +47,13 @@ eecho '(re-)sourcing your .bash/ configurations'
 if [[ $mySystem == "Darwin" ]]; then
 	eecho "System: Darwin"
         ## if my ~/.bash/mb$HOSTNAME file exists
-        [ -f ~/.bash/mb-$myName.sh ] && eecho "file: mb-$myName" && source ~/.bash/mb-$myName.sh
+
+#echo $PWD
+#ls -al $PWD
+
+. .bash/mb-$myName.sh
+
+#        [ -f ~/.bash/mb-$myName.sh ] && eecho "file: mb-$myName" && source ~/.bash/mb-$myName.sh
         [ -f ~/.bash/mbp-$myName.sh ] && eecho "file: mbp-$myName" && source ~/.bash/mbp-$myName.sh
 fi
         
