@@ -13,19 +13,22 @@ if [[ -n "$DOTBASH_DEBUG" ]] ; then echo "sourcing imported"; fi
 
 alias eecho="echo"
 
-
+#alias source="zour"
 
 function zour {
 #  history | grep "$1"
-echo "passed $1"
 
-time ( [[ -f $PWD/$1 ]] && eecho "file: $1" && source $@ )
+[[ -f $1 ]] && echo "file: $1" && time source $@
+#time ( source $@  && [[ -f $PWD/$1 ]] && eecho "file: $1" )
+
 ## 
 #[[ -f $1 ]] && eecho "file: $1" && ls -la && source $@
 
 }
 
-### I want to make a more verbose source '.' function.
+
+
+### I want to make a more verbose source '.'/source function.
 ### under time
 ### it should check for existence
 ### echo the file name
@@ -43,7 +46,7 @@ mySystem=$(uname -s)
 
 eecho ''
 eecho '(re-)sourcing your .bash/ configurations'
-
+eecho ''
 if [[ $mySystem == "Darwin" ]]; then
 	eecho "System: Darwin"
         ## if my ~/.bash/mb$HOSTNAME file exists
@@ -51,9 +54,9 @@ if [[ $mySystem == "Darwin" ]]; then
 #echo $PWD
 #ls -al $PWD
 
-. .bash/mb-$myName.sh
+#. .bash/mb-$myName.sh
 
-#        [ -f ~/.bash/mb-$myName.sh ] && eecho "file: mb-$myName" && source ~/.bash/mb-$myName.sh
+        [ -f ~/.bash/mb-$myName.sh ] && eecho "file: mb-$myName" && zour ~/.bash/mb-$myName.sh
         [ -f ~/.bash/mbp-$myName.sh ] && eecho "file: mbp-$myName" && source ~/.bash/mbp-$myName.sh
 fi
         
@@ -73,4 +76,4 @@ if [[ $mySystem == "MINGW32_NT-6.1" ]] ; then
 
 fi
 
-eecho ''
+#eecho ''

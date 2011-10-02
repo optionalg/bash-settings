@@ -1,7 +1,7 @@
 #!/bin/echo "This file is meant to be sourced from the command or .bashrc"
 
-_dir=$dir 
 dir=`dirname $BASH_SOURCE`
+_dir=$dir 
 
 . $dir/bash-completion/git-completion.sh
 . $dir/git-shortcuts.sh
