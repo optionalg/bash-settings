@@ -2,9 +2,12 @@
 
 ##### Git shortcuts
 
+if [[ -x `which hub` ]] ; then
+
 # trying out 'hub'
 alias git=hub
 
+fi
 
 ## neat status
 alias gs='git status; git submodule status'

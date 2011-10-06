@@ -9,7 +9,10 @@
 export DOTBASH_DEBUG=true
 if [[ -n "$DOTBASH_DEBUG" ]] ; then echo "sourcing imported"; fi
 
+dir=`dirname $BASH_SOURCE`
+_dir=$dir 
 
+#echo _dir $_dir
 
 alias eecho="echo"
 
@@ -37,7 +40,7 @@ function zour {
 
 
 
-#source ~/.bash/common/terminal.sh
+#source $_dir/common/terminal.sh
 #set -x
 alias eecho="echo \>\>\> "
 ## set our local host name (eg. everything before the first period.)
@@ -56,22 +59,22 @@ if [[ $mySystem == "Darwin" ]]; then
 
 #. .bash/mb-$myName.sh
 
-        [ -f ~/.bash/mb-$myName.sh ] && eecho "file: mb-$myName" && zour ~/.bash/mb-$myName.sh
-        [ -f ~/.bash/mbp-$myName.sh ] && eecho "file: mbp-$myName" && source ~/.bash/mbp-$myName.sh
+        [ -f $_dir/mb-$myName.sh ] && eecho "file: mb-$myName" && zour $_dir/mb-$myName.sh
+        [ -f $_dir/mbp-$myName.sh ] && eecho "file: mbp-$myName" && source $_dir/mbp-$myName.sh
 fi
         
 if [[ $mySystem == "Linux" ]]; then
 	eecho "System: Linux"
         ## if my ~/.bash/server-$HOSTNAME file exists
-        [ -f ~/.bash/server-$myName.sh ] && eecho "file: server-$myName" && source ~/.bash/server-$myName.sh
+        [ -f $_dir/server-$myName.sh ] && eecho "file: server-$myName" && source $_dir/server-$myName.sh
 
 fi
 
 if [[ $mySystem == "MINGW32_NT-6.1" ]] ; then
 	eecho "System: MINGW32"
 
-	[ -f ~/.bash/win32-$myName.sh ] && eecho "file: win32-$myName" && source ~/.bash/win32-$myName.sh
-	[ -f ~/.bash/win32-desktop.sh ] && eecho "file: win32-desktop" && source ~/.bash/win32-desktop.sh
+	[ -f $_dir/win32-$myName.sh ] && eecho "file: win32-$myName" && source $_dir/win32-$myName.sh
+	[ -f $_dir/win32-desktop.sh ] && eecho "file: win32-desktop" && source $_dir/win32-desktop.sh
 
 
 fi
