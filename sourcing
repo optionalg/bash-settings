@@ -62,6 +62,18 @@ if [[ $mySystem == "Darwin" ]]; then
 
         [ -f $_dir/mb-$myName.sh ] && eecho "file: mb-$myName" && zour $_dir/mb-$myName.sh
         [ -f $_dir/mbp-$myName.sh ] && eecho "file: mbp-$myName" && source $_dir/mbp-$myName.sh
+
+## other options for hostname determination
+
+### /usr/libexec/PlistBuddy -c 'Print System:Network:HostNames:LocalHostName' \
+###         /Library/Preferences/SystemConfiguration/preferences.plist
+
+
+### hostname -s
+### networksetup -getcomputername 2>/dev/null
+### system_profiler SPSoftwareDataType |sed '/ *Computer Name: /!d;s///'
+
+
 fi
         
 if [[ $mySystem == "Linux" ]]; then
