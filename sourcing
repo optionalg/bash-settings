@@ -22,6 +22,7 @@ function zour {
 #  history | grep "$1"
 
 [[ -f $1 ]] && echo "file: $1" && time source $@
+
 #time ( source $@  && [[ -f $PWD/$1 ]] && eecho "file: $1" )
 
 ## 
@@ -50,6 +51,7 @@ mySystem=$(uname -s)
 eecho ''
 eecho '(re-)sourcing your .bash/ configurations'
 eecho ''
+
 if [[ $mySystem == "Darwin" ]]; then
 	eecho "System: Darwin"
         ## if my ~/.bash/mb$HOSTNAME file exists
@@ -58,10 +60,13 @@ if [[ $mySystem == "Darwin" ]]; then
 #ls -al $PWD
 
 #. .bash/mb-$myName.sh
-	myName=`/usr/libexec/PlistBuddy -c 'Print System:Network:HostNames:LocalHostName' /Library/Preferences/SystemConfiguration/preferences.plist`
+myName=`/usr/libexec/PlistBuddy -c 'Print System:Network:HostNames:LocalHostName' /Library/Preferences/SystemConfiguration/preferences.plist`
 
-        [ -f $_dir/mb-$myName.sh ] && eecho "file: mb-$myName" && zour $_dir/mb-$myName.sh
-        [ -f $_dir/mbp-$myName.sh ] && eecho "file: mbp-$myName" && source $_dir/mbp-$myName.sh
+zour $_dir/mb-$myName.sh
+zour $_dir/mbp-$myName.sh
+
+#    [ -f $_dir/mb-$myName.sh ] && eecho "file: mb-$myName" && zour $_dir/mb-$myName.sh
+#    [ -f $_dir/mbp-$myName.sh ] && eecho "file: mbp-$myName" && source $_dir/mbp-$myName.sh
 
 ## other options for hostname determination
 

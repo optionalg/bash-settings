@@ -27,7 +27,7 @@ zour $dir/desktop/editors.sh
 zour $dir/desktop/work.sh
 
 zour $dir/common/git.sh
-zour $dir/common/mac.sh
+. $dir/common/mac.sh
 
 zour $dir/common/android-dev.sh
 

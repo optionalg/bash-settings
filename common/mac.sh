@@ -12,9 +12,9 @@ fi
 ####
 # for mac ports
 
-    if [ -f /opt/local/etc/bash_completion ]; then
+if [ -f /opt/local/etc/bash_completion ]; then
         . /opt/local/etc/bash_completion
-    fi
+fi
 ##end mac ports # 
 
 # sweet easy to remember way to flush the dns cache on your mac
@@ -46,7 +46,3 @@ alias top="top -o cpu -O rprvt"
 
 unalias ps 2>/dev/null || alias ps="ps -axl"
 unalias psg 2>/dev/null || alias psg="ps -axl |grep "
-
-
-
-
