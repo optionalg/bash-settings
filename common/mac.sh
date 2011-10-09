@@ -1,6 +1,14 @@
 #!/bin/echo "This file is meant to be sourced from the command or .bashrc"
 
 
+###Add the following lines to your ~/.bash_profile file:
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+   . `brew --prefix`/etc/bash_completion
+fi
+
+##To install Homebrew's own completion script:
+#ln -s "/usr/local/Library/Contributions/brew_bash_completion.sh" "/usr/local/etc/bash_completion.d"
+
 ####
 # for mac ports
 
@@ -38,3 +46,7 @@ alias top="top -o cpu -O rprvt"
 
 unalias ps 2>/dev/null || alias ps="ps -axl"
 unalias psg 2>/dev/null || alias psg="ps -axl |grep "
+
+
+
+
