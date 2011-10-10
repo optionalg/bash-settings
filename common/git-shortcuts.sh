@@ -2,11 +2,9 @@
 
 ##### Git shortcuts
 
-if [[ -x `which hub` ]] ; then
-
-# trying out 'hub'
-alias git=hub
-
+if [[ -x `which hub 2>/dev/null` ]] ; then
+	# trying out 'hub'
+	alias git=hub
 fi
 
 ## neat status
