@@ -8,9 +8,12 @@ alias top="top -o cpu -O rprvt"
 unalias ps 2>/dev/null || alias ps="ps -axl"
 unalias psg 2>/dev/null || alias psg="ps -axl |grep "
 
+## fix up the dmesg
+unalias dmesg 2>/dev/null || alias dmesg="$NOT_ROOT dmesg"
+
+
 # sweet easy to remember way to flush the dns cache on your mac
 alias flushdns="dscacheutil -flushcache"
-
 
 
 
