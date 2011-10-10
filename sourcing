@@ -9,7 +9,7 @@ HEADER1
 
 
 ### for false just leave empty, true is any value.
-export DOTBASH_DEBUG=
+export DOTBASH_DEBUG=true
 export DOTBASH_DTIMER=
 
 ## set our local host name (eg. everything before the first period.)
@@ -20,8 +20,8 @@ export mySystem=$(uname -s)
 #readonly myName
 readonly mySystem
 
-dir=`dirname $BASH_SOURCE`
-_dir=$dir 
+dir=`dirname "$BASH_SOURCE"`
+_dir="$dir" 
 
 alias eecho="echo"
 alias eecho="echo \>\>\> "
@@ -38,14 +38,14 @@ echo the file name
 ZOUR_HELP1
 
 function zour {
-	if [[ -f $1 ]]; then
-		eecho "file: $1"
+	if [[ -f "$@" ]]; then
+		eecho "file: \"$@\""
 
 		if [[ -z "$DOTBASH_DTIMER" ]] ; then
-	 		. $@
+	 		. "$@"
 		else
 			echo "Timer results below:"
-			time . $@ 
+			time . "$@" 
 			echo; echo
 		fi
 	fi
@@ -62,8 +62,8 @@ if [[ $mySystem == "Darwin" ]]; then
 	## use this system name based on the configured name not DNS	
 	myName=`/usr/libexec/PlistBuddy -c 'Print System:Network:HostNames:LocalHostName' /Library/Preferences/SystemConfiguration/preferences.plist`
 
-	zour $_dir/mb-$myName.sh
-	zour $_dir/mbp-$myName.sh
+	zour "$_dir/mb-$myName.sh"
+	zour "$_dir/mbp-$myName.sh"
 
 	## other options for hostname determination
 	### /usr/libexec/PlistBuddy -c 'Print System:Network:HostNames:LocalHostName' \
@@ -79,15 +79,17 @@ fi
 if [[ $mySystem == "Linux" ]]; then
 	eecho "System: Linux"
         ## if my ~/.bash/server-$HOSTNAME file exists
-        zour $_dir/server-$myName.sh
+        zour "$_dir/server-$myName.sh"
 fi
 ###
 
 ### MING on Windows
-if [[ $mySystem == "MINGW32_NT-6.1" ]] ; then
+#if [[ $mySystem =~ /MINGW32_NT/ ]] ; then
+if [[ $(echo $mySystem | grep MINGW32_NT) ]] ; then 
 	eecho "System: MINGW32"
-	zour $_dir/win32-$myName.sh
-	zour $_dir/win32-desktop.sh
+
+	zour "$_dir/win32-desktop.sh"
+	zour "$_dir/win32-$myName.sh"
 fi
 ###
 

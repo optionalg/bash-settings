@@ -1,10 +1,8 @@
 #!/bin/echo "This file is meant to be sourced"
-# Usage:
-#   echo ". ~/.bash/mb-koobcam.sh" >> ~/.bash_login
 
-dir=`dirname $BASH_SOURCE`
+dir=`dirname "$BASH_SOURCE"`
 
-#. $dir/common/terminal.sh
+#zour $dir/common/terminal.sh
 
 #export PS1='\[\033[0;37m\]\w\[\033[00m\] \$ ' # override PS1 to a simpler format
 # default
@@ -13,20 +11,20 @@ dir=`dirname $BASH_SOURCE`
 #export PS1='\[\033[01;33m\]\u@\h\[\033[01;31m\] \w \[\033[01;34m\]\$\[\033[00m\] '
 #export PS1="\[\e[0;31m\]\u@\h:\w\$ \[\e[1;30m\]"
 
-#. $dir/common/path.sh
-#. $dir/common/misc-env.sh
-. $dir/common/misc-shortcuts.sh
-#. $dir/common/x11.sh
+#zour "$dir/common/path.sh"
+#zour "$dir/common/misc-env.sh"
+zour "$dir/common/misc-shortcuts.sh"
+#zour "$dir/common/x11.sh"
 
-#. $dir/desktop/path.sh
-. $dir/desktop/misc-env.sh
-. $dir/desktop/editors.sh
-. $dir/desktop/work.sh
+#zour "$dir/desktop/path.sh"
+zour "$dir/desktop/misc-env.sh"
+zour "$dir/desktop/editors.sh"
+zour "$dir/desktop/work.sh"
 
-. $dir/common/git.sh
-. $dir/common/win32.sh
+zour "$dir/common/git.sh"
+zour "$dir/common/win32.sh"
 
-#. $dir/common/android-dev.sh
+#zour "$dir/common/android-dev.sh"
 
 alias rc='cd ~/.bash; $EDITOR ; source ~/.bash_login'
 alias f5='source ~/.bash_login'
