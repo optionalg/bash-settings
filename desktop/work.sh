@@ -2,5 +2,6 @@
 
 
 #alias prj='    cd ~/Develop/prj'
-alias Code='	cd ~/Code'
-alias .bash='   cd ~/.bash'
+
+[[ -d ~/Code ]] && alias Code='	cd ~/Code'
+[[ -d ~/.bash ]] && alias .bash='cd ~/.bash'

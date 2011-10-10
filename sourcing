@@ -1,99 +1,101 @@
 #!/bin/echo "This file is meant to be sourced from the command or .bashrc"
-###
-# include this file like this to activate .bash
-##
-## [[ -f ~/.bash/sourcing ]] && time source ~/.bash/sourcing
-##
+<<HEADER1
+Use this bash script to automatically source in appropriate files
 
-###
-export DOTBASH_DEBUG=true
-if [[ -n "$DOTBASH_DEBUG" ]] ; then echo "sourcing imported"; fi
+# include this file like this to activate .bash
+#[[ -f ~/.bash/sourcing ]] && time source ~/.bash/sourcing
+
+HEADER1
+
+
+### for false just leave empty, true is any value.
+export DOTBASH_DEBUG=
+export DOTBASH_DTIMER=
+
+## set our local host name (eg. everything before the first period.)
+export myName=$(uname -n | cut -f1 -d.)
+export mySystem=$(uname -s)
+
+## mark these variable readonly
+#readonly myName
+readonly mySystem
 
 dir=`dirname $BASH_SOURCE`
 _dir=$dir 
 
-#echo _dir $_dir
-
 alias eecho="echo"
+alias eecho="echo \>\>\> "
 
-#alias source="zour"
+<<ZOUR_HELP1
+## zour makes the wheels go'round
+I wanted to make a more verbose source,  '.' or source function.
+under time
+it should check for existence
+echo the file name
+ source the file
+ time returns
+##########
+ZOUR_HELP1
 
 function zour {
-#  history | grep "$1"
+	if [[ -f $1 ]]; then
+		eecho "file: $1"
 
-[[ -f $1 ]] && echo "file: $1" && time source $@
-
-#time ( source $@  && [[ -f $PWD/$1 ]] && eecho "file: $1" )
-
-## 
-#[[ -f $1 ]] && eecho "file: $1" && ls -la && source $@
-
+		if [[ -z "$DOTBASH_DTIMER" ]] ; then
+	 		. $@
+		else
+			echo "Timer results below:"
+			time . $@ 
+			echo; echo
+		fi
+	fi
 }
-
-
-
-### I want to make a more verbose source '.'/source function.
-### under time
-### it should check for existence
-### echo the file name
-###  source the file
-### time returns
-
-
-
-#source $_dir/common/terminal.sh
-#set -x
-alias eecho="echo \>\>\> "
-## set our local host name (eg. everything before the first period.)
-myName=$(uname -n | cut -f1 -d.)
-mySystem=$(uname -s)
-
+### Just some glamour
 eecho ''
 eecho '(re-)sourcing your .bash/ configurations'
 eecho ''
+###
+## set -x ### debugging
 
 if [[ $mySystem == "Darwin" ]]; then
 	eecho "System: Darwin"
-        ## if my ~/.bash/mb$HOSTNAME file exists
+	## use this system name based on the configured name not DNS	
+	myName=`/usr/libexec/PlistBuddy -c 'Print System:Network:HostNames:LocalHostName' /Library/Preferences/SystemConfiguration/preferences.plist`
 
-#echo $PWD
-#ls -al $PWD
+	zour $_dir/mb-$myName.sh
+	zour $_dir/mbp-$myName.sh
 
-#. .bash/mb-$myName.sh
-myName=`/usr/libexec/PlistBuddy -c 'Print System:Network:HostNames:LocalHostName' /Library/Preferences/SystemConfiguration/preferences.plist`
-
-zour $_dir/mb-$myName.sh
-zour $_dir/mbp-$myName.sh
-
-#    [ -f $_dir/mb-$myName.sh ] && eecho "file: mb-$myName" && zour $_dir/mb-$myName.sh
-#    [ -f $_dir/mbp-$myName.sh ] && eecho "file: mbp-$myName" && source $_dir/mbp-$myName.sh
-
-## other options for hostname determination
-
-### /usr/libexec/PlistBuddy -c 'Print System:Network:HostNames:LocalHostName' \
-###         /Library/Preferences/SystemConfiguration/preferences.plist
-
-
-### hostname -s
-### networksetup -getcomputername 2>/dev/null
-### system_profiler SPSoftwareDataType |sed '/ *Computer Name: /!d;s///'
-
+	## other options for hostname determination
+	### /usr/libexec/PlistBuddy -c 'Print System:Network:HostNames:LocalHostName' \
+	###         /Library/Preferences/SystemConfiguration/preferences.plist
+	### hostname -s
+	### networksetup -getcomputername 2>/dev/null
+	### system_profiler SPSoftwareDataType |sed '/ *Computer Name: /!d;s///'
 
 fi
-        
+###
+
+### Linux Based        
 if [[ $mySystem == "Linux" ]]; then
 	eecho "System: Linux"
         ## if my ~/.bash/server-$HOSTNAME file exists
-        [ -f $_dir/server-$myName.sh ] && eecho "file: server-$myName" && source $_dir/server-$myName.sh
-
+        zour $_dir/server-$myName.sh
 fi
+###
 
+### MING on Windows
 if [[ $mySystem == "MINGW32_NT-6.1" ]] ; then
 	eecho "System: MINGW32"
-	[ -f $_dir/win32-$myName.sh ] && eecho "file: win32-$myName" && source $_dir/win32-$myName.sh
-	[ -f $_dir/win32-desktop.sh ] && eecho "file: win32-desktop" && source $_dir/win32-desktop.sh
+	zour $_dir/win32-$myName.sh
+	zour $_dir/win32-desktop.sh
+fi
+###
 
-
+### Just something extra if it's on.
+if [[ ! -z "$DOTBASH_DEBUG" ]] ; then
+	eecho "|----------------------"
+	eecho "|  sourcing imported"
+	eecho "| _dir $_dir "
+	eecho "|----------------------"
 fi
 
-#eecho ''

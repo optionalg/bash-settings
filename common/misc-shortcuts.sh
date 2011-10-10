@@ -1,33 +1,29 @@
-#!/bin/echo "This file is meant to be sourced from the command or .bashrc"
+#!/bin/echo "This file is meant to be zourd from the command or .bashrc"
 
-
-#dir=`dirname $BASH_SOURCE`
-if [[ -f ./terminal.sh ]]; then 
-	source ./terminal.sh
-fi
+#if [[ -f ./terminal.sh ]]; then 
+#	zour ./terminal.sh
+#fi
 
 
 ## colors for ls
 if [[ `uname` != 'Darwin' ]]; then
-# not darwin color
-# possibly linux
-### dircolors
+	# not darwin color
+	# possibly linux
+	### dircolors
+	#### check to see if it exists and is executable
+	### dircolors
+	if [[ -x `which dircolors` ]]; then
+		# colors for ls, etc.  Prefer ~/.dir_colors #64489
+		if [[ -f ~/.dir_colors ]]; then
+		        eval `dircolors -b ~/.dir_colors`
+		else
+		        eval `dircolors -b /etc/DIR_COLORS`
+		fi
+		# GNU dir colors
 
-#### check to see if it exists and is executable
-### dircolors
-if [[ -x `which dircolors` ]]; then
-	# colors for ls, etc.  Prefer ~/.dir_colors #64489
-	if [[ -f ~/.dir_colors ]]; then
-	        eval `dircolors -b ~/.dir_colors`
-	else
-	        eval `dircolors -b /etc/DIR_COLORS`
+		LS_OPTIONS="${LS_OPTIONS} --time-style=long -A --color=auto"
+	##	alias ls="ls --color=auto"
 	fi
-	# GNU dir colors
-	
-	LS_OPTIONS="${LS_OPTIONS} --time-style=long -A --color=auto"
-##	alias ls="ls --color=auto"
-fi
-
 ##
 elif [[ `uname` == 'Darwin' ]]; then
 	LS_OPTIONS="${LS_OPTIONS} -G"
@@ -35,9 +31,8 @@ elif [[ `uname` == 'Darwin' ]]; then
 fi
 
 
-
 if [[ -f ~/.bash/misc-local.sh ]]; then 
-	source ~/.bash/misc-local.sh
+	zour ~/.bash/misc-local.sh
 fi
 
 

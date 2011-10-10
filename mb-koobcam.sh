@@ -1,4 +1,4 @@
-#!/bin/echo "This file is meant to be sourced from the command or .bashrc"
+#!/bin/echo "This file is meant to be zour'd or sourced from the command or .bashrc"
 
 if [[ -n "$DOTBASH_DEBUG" ]] ; then echo "mb-koobcam.sh imported"; fi
 
@@ -27,7 +27,7 @@ zour $dir/desktop/editors.sh
 zour $dir/desktop/work.sh
 
 zour $dir/common/git.sh
-. $dir/common/mac.sh
+zour $dir/mac.sh
 
 zour $dir/common/android-dev.sh
 

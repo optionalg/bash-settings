@@ -3,8 +3,8 @@
 dir=`dirname $BASH_SOURCE`
 _dir=$dir 
 
-. $dir/bash-completion/git-completion.sh
-. $dir/git-shortcuts.sh
+zour $dir/bash-completion/git-completion.sh
+zour $dir/git-shortcuts.sh
 
 ##export PS1="\[\033[0;33m\]\$(__git_ps1 '%s ')\[\033[00m\]$PS1"
 

@@ -1,10 +1,17 @@
-#!/bin/echo "This file is meant to be sourced from the command or .bashrc"
+#!/bin/echo "This file is meant to be zourd from the command or .bashrc"
 
-if [[ -n "$DOTBASH_DEBUG" ]] ; then echo "common/terminal.sh imported"; fi
+if [[ -z "$DOTBASH_DEBUG" ]] ; then echo "common/terminal.sh imported"; fi
+<<HELP
+
+This file needs a lot of love.
+
+HELP
+
+
 
 ## Set our name and sytem type for later.
-myName=$(uname -n)
-mySystem=$(uname -s)
+#myName=$(uname -n)
+#mySystem=$(uname -s)
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -54,7 +61,8 @@ function h() {
   history | grep "$1"
 }
 
-alias eecho="echo"
+
+alias eecho="echo" ## Fix the echo back
 NOCOLOR=0
 if [ $NOCOLOR == false ]; then
         alias eecho="echo -n '\>\>'; echo '$*' "
@@ -68,18 +76,18 @@ else
 fi
 
 
-# figure out if this is being sourced by root
+# figure out if this is being zourd by root
 NOT_ROOT=""
 ROOT_UID=0 # uid of root
 if [ "$UID" -ne "$ROOT_UID" ]
 then
-#        eecho "~/.bash/ sourced by $USER"
+#        eecho "~/.bash/ zourd by $USER"
         NOT_ROOT="sudo"
         # make s- act like sudo with bash completetion
 ##        complete -F _root_command $filenames s-
 else
 echo >/dev/null
-#        eecho "~/.bash/ sourced by $USER"
+#        eecho "~/.bash/ zourd by $USER"
 fi
 
 
