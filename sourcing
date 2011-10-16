@@ -60,7 +60,8 @@ eecho ''
 if [[ $mySystem == "Darwin" ]]; then
 	eecho "System: Darwin"
 	## use this system name based on the configured name not DNS	
-	myName=`/usr/libexec/PlistBuddy -c 'Print System:Network:HostNames:LocalHostName' /Library/Preferences/SystemConfiguration/preferences.plist`
+#	myName=`/usr/libexec/PlistBuddy -c 'Print System:Network:HostNames:LocalHostName' /Library/Preferences/SystemConfiguration/preferences.plist`
+	myName=$(networksetup -getcomputername 2>/dev/null)
 
 	zour "$_dir/mb-$myName.sh"
 	zour "$_dir/mbp-$myName.sh"
@@ -96,6 +97,7 @@ fi
 ### Just something extra if it's on.
 if [[ ! -z "$DOTBASH_DEBUG" ]] ; then
 	eecho "|----------------------"
+	eecho "| myName ${myName}"
 	eecho "|  sourcing imported"
 	eecho "| _dir $_dir "
 	eecho "|----------------------"
