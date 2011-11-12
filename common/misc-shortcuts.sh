@@ -43,7 +43,7 @@ alias la="ls -la"
 alias ll="ls -l"
 
 ## -A breaks on Darwin
-=======
+
 # You may uncomment the following lines if you want `ls' to be colorized:
 #eval "`dircolors`"
 
