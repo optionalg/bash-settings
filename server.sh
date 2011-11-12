@@ -1,17 +1,16 @@
 #!/bin/echo "This file is meant to be sourced from the command or .bashrc"
 # Usage:
-#   echo ". ~/.bash/server.sh" >> ~/.bash_login
+#   echo "zour ~/.bash/server.sh" >> ~/.bash_login
 
-dir=`dirname $BASH_SOURCE`
+dir=`dirname "$BASH_SOURCE"`
 
-. $dir/common/terminal.sh
-. $dir/common/path.sh
-. $dir/common/misc-env.sh
-. $dir/common/misc-shortcuts.sh
+zour "$dir/common/terminal.sh"
+zour "$dir/common/path.sh"
+zour "$dir/common/misc-env.sh"
+zour "$dir/common/misc-shortcuts.sh"
 
-. $dir/server/range.sh
-. $dir/server/misc.sh
+zour "$dir/server/range.sh"
+zour "$dir/server/misc.sh"
 
-. $dir/common/git.sh
+zour "$dir/common/git.sh"
 
-test -r /sw/bin/init.sh && . /sw/bin/init.sh

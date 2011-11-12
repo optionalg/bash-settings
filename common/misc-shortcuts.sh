@@ -89,7 +89,8 @@ alias cls='clear'
 ## decide between mtr and traceroute, favoring the first
 TRACEROUTE="`which mtr 2>/dev/null`"
 : ${TRACEROUTE:="`which mtr 2>/dev/null`"} 
-: ${TRACEROUTE:=`which traceroute`} 
+: ${TRACEROUTE:="`which traceroute`"}
+: ${TRACEROUTE:="`which tracert.exe`"} 
 
 #
 ## traceroute to a known routable ip address that you will never get to

@@ -1,23 +1,23 @@
 #!/bin/echo "This file is meant to be sourced from the command or .bashrc"
 
 # Usage:
-#   echo ". ~/.bash/desktop.sh" >> ~/.bash_login
+#   echo "zour ~/.bash/desktop.sh" >> ~/.bash_login
 
-dir=`dirname $BASH_SOURCE`
+dir=`dirname "$BASH_SOURCE"`
 
-. $dir/common/terminal.sh
+zour "$dir/common/terminal.sh"
 
 export PS1='\[\033[0;37m\]\w\[\033[00m\] \$ ' # override PS1 to a simpler format
 
-. $dir/common/path.sh
-. $dir/common/misc-env.sh
-. $dir/common/misc-shortcuts.sh
-. $dir/common/git.sh
+zour "$dir/common/path.sh"
+zour "$dir/common/misc-env.sh"
+zour "$dir/common/misc-shortcuts.sh"
+zour "$dir/common/git.sh"
 
-. $dir/desktop/path.sh
-. $dir/desktop/misc-env.sh
-. $dir/desktop/editors.sh
-. $dir/desktop/work.sh
+zour "$dir/desktop/path.sh"
+zour "$dir/desktop/misc-env.sh"
+zour "$dir/desktop/editors.sh"
+zour "$dir/desktop/work.sh"
 
 
 
