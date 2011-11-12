@@ -5,3 +5,5 @@
 
 [[ -d ~/Code ]] && alias Code='	cd ~/Code'
 [[ -d ~/.bash ]] && alias .bash='cd ~/.bash'
+
+alias work='cd ~/work'

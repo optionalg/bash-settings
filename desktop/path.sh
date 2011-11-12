@@ -15,3 +15,7 @@ fi
 if [[ -d /opt/local/lib/postgresql83/bin ]]; then
 export PATH="/opt/local/lib/postgresql83/bin:$PATH"  # postgresql
 fi
+
+if [[ -d /opt/android-sdk/platform-tools/ ]]; then 
+export PATH=$PATH:/opt/android-sdk/platform-tools/
+fi

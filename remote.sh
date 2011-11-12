@@ -14,3 +14,6 @@ zour "$dir/server/misc.sh"
 
 zour "$dir/common/git.sh"
 
+if [ -f $dir/hosts/hosts.sh ]; then
+    . $dir/hosts/hosts.sh
+fi

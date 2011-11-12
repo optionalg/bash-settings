@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/bin/echo "This file is meant to be zourd from the command or .bashrc"
 
 #if [[ -f ./terminal.sh ]]; then 
@@ -43,6 +44,10 @@ alias la="ls -la"
 alias ll="ls -l"
 
 ## -A breaks on Darwin
+=======
+# You may uncomment the following lines if you want `ls' to be colorized:
+#eval "`dircolors`"
+>>>>>>> 320c40d7431e9ae79713af7861a2eda13ea365dd
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -lh'
 alias l='ls $LS_OPTIONS -lh'
@@ -60,6 +65,7 @@ alias mv="mv -iv"
 # tar aliases
 alias tgz="tar -cvzf "
 alias zxvf="tar zxvf "
+<<<<<<< HEAD
 
 
 alias g?="grep \$1"
@@ -147,3 +153,10 @@ alias nukeDouble="find /srv -iregex \!TimeMachine -type d -name .AppleDouble -ex
 
 ## number of lines contained in *.c *.cpp and *.h files, in a project directory
 alias lines="find . -name *.\[c\|h\]p? | xargs wc -l"
+=======
+alias g?="grep $GREP_OPTIONS \$1"
+alias rake?="rake -T | g? \$1"
+alias gem?="gem list | g? \$1"
+
+alias be="bundle exec"
+>>>>>>> 320c40d7431e9ae79713af7861a2eda13ea365dd
