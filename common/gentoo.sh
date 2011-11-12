@@ -29,7 +29,7 @@ alias dispatch-conf="$NOT_ROOT dispatch-conf"
 
 ######################
 RSYNC_CMD="rsync --delete -ave ssh"
-alias qwerty="emerge --deep --newuse --reinstall=changed-use --update --verbose --tree --ask --complete-graph $*"
+alias qwerty="emerge --deep --newuse --reinstall=changed-use --update --verbose --tree --ask --complete-graph \${@}"
 #emerge --update --newuse --deep @world
 
 ## eix-layman is lame
