@@ -14,7 +14,7 @@ alias glsa-doit='glsa-check  -p $(glsa-check -t all)'
 
 
 ## rebuild the basic toolset
-alias tooly="time sudo emerge --oneshot --ask --verbose --jobs 1 sys-devel/gcc-config virtual/libc sys-devel/binutils sys-devel/gcc sys-devel/libtool # libstdc++-v3"
+alias tooly="time sudo emerge --oneshot --ask --verbose --jobs 1 sys-devel/gcc-config virtual/libc sys-libs/glibc sys-devel/binutils sys-devel/gcc sys-devel/libtool # libstdc++-v3"
 
 alias eselect="$NOT_ROOT eselect"
 alias emerge="$NOT_ROOT emerge"
