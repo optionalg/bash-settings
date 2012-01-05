@@ -19,7 +19,7 @@ export PS1='\[\033[01;33m\]\u@\h\[\033[01;31m\] \w \[\033[01;34m\]\$\[\033[00m\]
 zour "$dir/common/path.sh"
 zour "$dir/common/misc-env.sh"
 zour "$dir/common/misc-shortcuts.sh"
-zour "$dir/common/x11.sh"
+#zour "$dir/common/x11.sh"
 
 zour "$dir/desktop/path.sh"
 zour "$dir/desktop/misc-env.sh"

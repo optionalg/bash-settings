@@ -160,3 +160,9 @@ alias rake?="rake -T | g? \$1"
 alias gem?="gem list | g? \$1"
 
 alias be="bundle exec"
+
+
+if [[ -x `which iperf` ]]; then
+	alias pxbw="iperf -c px.px.home -t 60 -i 1"
+
+fi
