@@ -34,8 +34,8 @@ alias QuickBlock="ipt_log $1 && ipt_drop $1 $2*"
 
 ## [-b bcc-addr] [-c cc-addr] [-s subject]            to-addr
 alias ipt_email="mail -c logs+iptables@ns1.net -s \"bad stuff\" px@ns1.net"
-alias ipt_log="$not_root iptables -A INPUT -s $1 -m limit --limit 5/hour -j LOG --log-prefix \"$2* $1\""
-alias ipt_drop="$not_root iptables -A INPUT -s $1 -j DROP"
+alias ipt_log="$NOT_ROOT iptables -A INPUT -s $1 -m limit --limit 5/hour -j LOG --log-prefix \"$2* $1\""
+alias ipt_drop="$NOT_ROOT iptables -A INPUT -s $1 -j DROP"
 
 #[9209:519904] -A INPUT -s 220.181.0.0/16 -m limit --limit 5/hour -j LOG --log-prefix "baiduhttp abuse 220.181.0.0/1"
 #[15402:858484] -A INPUT -s 220.181.0.0/16 -j DROP
