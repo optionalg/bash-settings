@@ -24,13 +24,16 @@ alias eth0="ifconfig eth0"
 ## save iptables state
 ## 208.80.194.30
 ## 95.108.150.235
-alias QuickBlock=""
+alias QuickBlock="ipt_log $1 && ipt_drop $1 $2*"
 ##
 ## log this ip
 ## block this ip
 
 ## save iptables state
 ## email
+
+## [-b bcc-addr] [-c cc-addr] [-s subject]            to-addr
+alias ipt_email="mail -c logs+iptables@ns1.net -s \"bad stuff\" px@ns1.net"
 alias ipt_log="$not_root iptables -A INPUT -s $1 -m limit --limit 5/hour -j LOG --log-prefix \"$2* $1\""
 alias ipt_drop="$not_root iptables -A INPUT -s $1 -j DROP"
 
