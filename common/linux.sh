@@ -24,12 +24,13 @@ alias eth0="ifconfig eth0"
 ## save iptables state
 ## 208.80.194.30
 ## 95.108.150.235
-alias QuickBlock="ipt_log $1 && ipt_drop $1 $2*"
+alias QuickBlock="ipt_save && ipt_log $1 && ipt_drop $1 $2* && ip_save"
 ##
 ## log this ip
 ## block this ip
 
 ## save iptables state
+alias ipt_save="$NOT_ROOT /etc/init.d/iptables save"
 ## email
 
 ## [-b bcc-addr] [-c cc-addr] [-s subject]            to-addr
