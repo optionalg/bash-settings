@@ -35,7 +35,9 @@ alias ipt_save="$NOT_ROOT /etc/init.d/iptables save"
 echo $NOT_ROOT
 NOT_ROOT=`which sudo`
 ## [-b bcc-addr] [-c cc-addr] [-s subject]            to-addr
-function ipt_email() { set -x ;  subject="ipt_  ${@} bad stuff"; mail -c logs+iptables@ns1.net -s "$subject" px@ns1.net ; set +x ; }
+function ipt_email() { set -x ; 
+ subject="ipt_  ${@} bad stuff"; mail -c logs+iptables@ns1.net -s "$subject" px@ns1.net ;
+ set +x ; }
 function ipt_log() { 
 
 set -x
