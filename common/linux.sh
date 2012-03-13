@@ -35,14 +35,18 @@ alias ipt_save="$NOT_ROOT /etc/init.d/iptables save"
 echo $NOT_ROOT
 NOT_ROOT=`which sudo`
 ## [-b bcc-addr] [-c cc-addr] [-s subject]            to-addr
-function ipt_email() { mail -c logs+iptables@ns1.net -s \"ipt_ ${2} bad stuff\" px@ns1.net ; }
+function ipt_email() { set -x ;  subject="ipt_  ${@} bad stuff"; mail -c logs+iptables@ns1.net -s "$subject" px@ns1.net ; set +x ; }
 function ipt_log() { 
 
+set -x
 # fix log-prefix to work within string limits
-$NOT_ROOT echo iptables -A INPUT -s ${1} -m limit --limit 5/hour -j LOG --log-prefix \"${@}\" ; }
+$NOT_ROOT iptables -A INPUT -s ${1} -m limit --limit 5/hour -j LOG --log-prefix \"${@}\" ; }
+set +x
 #
 function ipt_drop() {
- $NOT_ROOT echo  iptables -A INPUT -s ${1} -j DROP ;
+set -x 
+ $NOT_ROOT  iptables -A INPUT -s ${1} -j DROP ;
+set +x
  }
 
 #[9209:519904] -A INPUT -s 220.181.0.0/16 -m limit --limit 5/hour -j LOG --log-prefix "baiduhttp abuse 220.181.0.0/1"
@@ -50,4 +54,4 @@ function ipt_drop() {
 
 function ipt_whois() { set -x ; bwwhois  ${1} ; set +x ; } 
 
-function  QuickBlock() { ipt_whois | ipt_email && ipt_save && ipt_log $@ && ipt_drop $@ && ip_save ; }
+function  QuickBlock() { ipt_whois ${1}| ipt_email ${@} && ipt_save && ipt_log $@ && ipt_drop $@ && ipt_save ; }
