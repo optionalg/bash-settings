@@ -22,8 +22,6 @@ alias eth0="ifconfig eth0"
 ## add log 5/hr
 ## drop/block ip
 ## save iptables state
-## 208.80.194.30
-## 95.108.150.235
 alias QuickBlock="ipt_save && ipt_log $1 && ipt_drop $1 $2* && ip_save"
 ##
 ## log this ip
