@@ -40,7 +40,8 @@ function ipt_log() {
 
 set -x
 # fix log-prefix to work within string limits
-$NOT_ROOT iptables -A INPUT -s ${1} -m limit --limit 5/hour -j LOG --log-prefix \"${@}\" ; }
+logmsg="${@}"
+$NOT_ROOT iptables -A INPUT -s ${1} -m limit --limit 5/hour -j LOG --log-prefix "$logmsg" ; }
 set +x
 #
 function ipt_drop() {
