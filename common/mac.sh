@@ -1,5 +1,7 @@
 #!/bin/echo "This file is meant to be sourced from the command or .bashrc"
 
+#make ls have colors
+alias ls="ls -G"
 
 # make top sort how i would like it
 alias top="top -o cpu -O rprvt"
