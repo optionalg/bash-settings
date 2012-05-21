@@ -65,6 +65,7 @@ if [[ $mySystem == "Darwin" ]]; then
 
 	zour "$_dir/mb-$myName.sh"
 	zour "$_dir/mbp-$myName.sh"
+	zour "$_dir/imac-$myName.sh"
 
 	## other options for hostname determination
 	### /usr/libexec/PlistBuddy -c 'Print System:Network:HostNames:LocalHostName' \
