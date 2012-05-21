@@ -3,6 +3,8 @@
 #make ls have colors
 alias ls="ls -G"
 
+alias edit="open -a smultron "
+
 # make top sort how i would like it
 alias top="top -o cpu -O rprvt"
 
