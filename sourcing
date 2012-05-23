@@ -9,7 +9,7 @@ HEADER1
 
 
 ### for false just leave empty, true is any value.
-export DOTBASH_DEBUG=true
+#export DOTBASH_DEBUG=true
 export DOTBASH_DTIMER=
 
 ## set our local host name (eg. everything before the first period.)
