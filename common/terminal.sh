@@ -1,10 +1,9 @@
 #!/bin/echo "This file is meant to be zourd from the command or .bashrc"
 
 if [[ -z "$DOTBASH_DEBUG" ]] ; then echo "common/terminal.sh imported"; fi
+
 <<HELP
-
 This file needs a lot of love.
-
 HELP
 
 
