@@ -61,5 +61,5 @@ alias homebrewInstall='ruby -e "$(curl -fsSLk https://gist.github.com/raw/323731
 
 
 ## open dnbradio.com/hi.pls because I am lazy and it feels right, it's using VLC.app
-alias dnbradio='open -a VLC.app http://dnbradio.com/hi.pls --args --no-media-library --play-and-stop --random --open http://dnbradio.com/hi.pls'
+alias dnbradio='open -a VLC.app --args --play-and-stop --random --open http://dnbradio.com/hi.pls'
 
