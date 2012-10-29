@@ -1,6 +1,9 @@
 #!/bin/echo "This file is meant to be sourced from the command or .bashrc"
 <<HEADER1
+## sourcing -- kludgey middle script 
+## <px@ns1.net>
 Use this bash script to automatically source in appropriate files
+ based on system type, and or machine name.
 
 # include this file like this to activate .bash
 #[[ -f ~/.bash/sourcing ]] && time source ~/.bash/sourcing
@@ -50,6 +53,7 @@ function zour {
 		fi
 	fi
 }
+
 ### Just some glamour
 eecho ''
 eecho '(re-)sourcing your .bash/ configurations'
@@ -59,6 +63,7 @@ eecho ''
 
 if [[ $mySystem == "Darwin" ]]; then
 	eecho "System: Darwin"
+
 	## use this system name based on the configured name not DNS	
 #	myName=`/usr/libexec/PlistBuddy -c 'Print System:Network:HostNames:LocalHostName' /Library/Preferences/SystemConfiguration/preferences.plist`
 	myName=$(networksetup -getcomputername 2>/dev/null)
@@ -91,7 +96,7 @@ if [[ $(echo $mySystem | grep MINGW32_NT) ]] ; then
 	eecho "System: MINGW32"
 
 	zour "$_dir/win32-desktop.sh"
-	zour "$_dir/win32-$myName.sh"
+	zour "$_dir/win32-$myName.sh" # hostname isn't really set for windows yet
 fi
 ###
 
