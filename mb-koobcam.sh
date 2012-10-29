@@ -6,6 +6,7 @@ if [[ -n "$DOTBASH_DEBUG" ]] ; then echo "mb-koobcam.sh imported"; fi
 #   echo ". ~/.bash/mb-koobcam.sh" >> ~/.bash_login
 
 dir=`dirname "$BASH_SOURCE"`
+readonly dir
 
 zour "$dir/common/terminal.sh"
 
@@ -34,4 +35,5 @@ zour "$dir/mac.sh"
 alias rc='cd ~/.bash; $EDITOR ; source ~/.bash_login'
 alias f5='source ~/.bash_login'
 
+## some old ports thing
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
