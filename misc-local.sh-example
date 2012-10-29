@@ -4,3 +4,6 @@
 ## per the .gitignore file
 ## just copy this -example file to a name that does not include -example 
 ###
+
+# necessary for ssd improvements where /tmp is another filesystem
+#export HOMEBREW_TEMP=$HOME/tmp
