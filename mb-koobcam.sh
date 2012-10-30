@@ -6,7 +6,7 @@ if [[ -n "$DOTBASH_DEBUG" ]] ; then echo "mb-koobcam.sh imported"; fi
 #   echo ". ~/.bash/mb-koobcam.sh" >> ~/.bash_login
 
 dir=`dirname "$BASH_SOURCE"`
-readonly dir
+#readonly dir
 
 zour "$dir/common/terminal.sh"
 
@@ -16,6 +16,8 @@ zour "$dir/common/terminal.sh"
 
 export PS1='\[\033[01;33m\]\u@\h\[\033[01;31m\] \w \[\033[01;34m\]\$\[\033[00m\] '
 #export PS1="\[\e[0;31m\]\u@\h:\w\$ \[\e[1;30m\]"
+
+zour "$dir/common/mac.sh"
 
 zour "$dir/common/path.sh"
 zour "$dir/common/android-dev.sh"
@@ -29,7 +31,6 @@ zour "$dir/desktop/editors.sh"
 zour "$dir/desktop/work.sh"
 
 zour "$dir/common/git.sh"
-zour "$dir/mac.sh"
 
 
 alias rc='cd ~/.bash; $EDITOR ; source ~/.bash_login'
