@@ -163,6 +163,6 @@ alias be="bundle exec"
 
 
 if [[ -x `which iperf` ]]; then
-	alias pxbw="iperf -c px.px.home -t 60 -i 1"
+	alias pxbw="iperf -c 192.168.48.1 -t 60 -i 1"
 
 fi
