@@ -10,7 +10,7 @@ export dir=`dirname "$BASH_SOURCE"`
 echo $dir
 
 zour "$dir/common/terminal.sh"
-##zour "$dir/bash-completion/git-completion.sh"
+##zour "$dir/common/bash-completion/git-completion.sh"
 #export PS1='\[\033[0;37m\]\w\[\033[00m\] \$ ' # override PS1 to a simpler format
 # default
 #export PS1='\h:\W \u\$'
