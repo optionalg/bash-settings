@@ -6,7 +6,8 @@ if [[ -z "$DOTBASH_DEBUG" ]] ; then echo "common/terminal.sh imported"; fi
 This file needs a lot of love.
 HELP
 
-
+## reinitialize terminfo
+tput sgr 0 0
 
 ## Set our name and sytem type for later.
 #myName=$(uname -n)
