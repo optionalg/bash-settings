@@ -7,13 +7,33 @@ echo $dir
 zour "common/terminal-colors.sh"
 echo $dir
 
+
+# Base styles and color palette
+# Solarized colors
+# https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized
+BOLD=$(tput bold)
+RESET=$(tput sgr0)
+SOLAR_YELLOW=$(tput setaf 136)
+SOLAR_ORANGE=$(tput setaf 166)
+SOLAR_RED=$(tput setaf 124)
+SOLAR_MAGENTA=$(tput setaf 125)
+SOLAR_VIOLET=$(tput setaf 61)
+SOLAR_BLUE=$(tput setaf 33)
+SOLAR_CYAN=$(tput setaf 37)
+SOLAR_GREEN=$(tput setaf 64)
+SOLAR_WHITE=$(tput setaf 254)
+
 export PS1='\[\033[01;33m\]\u@\h\[\033[01;31m\] \w \[\033[01;34m\]\$\[\033[00m\] '
 ##export PS1="\[\033[0;33m\]\$(__git_ps1 '%s ')\[\033[00m\]$PS1"
-
+echo ${SOLAR_ORANGE} stuff
 style_user="\[${RESET}${SOLAR_ORANGE}\]"
+echo ${SOLAR_YELLOW} yello
 style_host="\[${RESET}${SOLAR_YELLOW}\]"
+
 style_path="\[${RESET}${SOLAR_GREEN}\]"
+
 style_chars="\[${RESET}${SOLAR_WHITE}\]"
+
 style_branch="${SOLAR_CYAN}"
 
 if [[ "$SSH_TTY" ]]; then
