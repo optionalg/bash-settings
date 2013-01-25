@@ -63,3 +63,9 @@ alias homebrewInstall='ruby -e "$(curl -fsSLk https://gist.github.com/raw/323731
 ## open dnbradio.com/hi.pls because I am lazy and it feels right, it's using VLC.app
 alias dnbradio='open -a VLC.app --args --play-and-stop --random --open http://dnbradio.com/hi.pls'
 
+# Check that terminfo exists before changing TERM var to xterm-256color
+# Prevents prompt flashing in Mac OS X 10.6 Terminal.app
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+      export TERM='xterm-256color'
+fi
+
