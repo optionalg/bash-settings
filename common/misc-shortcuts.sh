@@ -104,6 +104,8 @@ alias fuck="$TRACEROUTE 24.24.24.24"
 ## traceroute to a known good dns server
 alias shit="$TRACEROUTE 4.2.2.2"
 
+## traceroute to gmail
+alias fgmail="$TRACEROUTE imap.googlemail.com"
 ## traceroute to my precious
 alias damn="$TRACEROUTE sip.ns1.net"
 
