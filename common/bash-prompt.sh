@@ -25,9 +25,7 @@ SOLAR_WHITE=$(tput setaf 254)
 
 export PS1='\[\033[01;33m\]\u@\h\[\033[01;31m\] \w \[\033[01;34m\]\$\[\033[00m\] '
 ##export PS1="\[\033[0;33m\]\$(__git_ps1 '%s ')\[\033[00m\]$PS1"
-echo ${SOLAR_ORANGE} stuff
 style_user="\[${RESET}${SOLAR_ORANGE}\]"
-echo ${SOLAR_YELLOW} yello
 style_host="\[${RESET}${SOLAR_YELLOW}\]"
 
 style_path="\[${RESET}${SOLAR_GREEN}\]"
@@ -105,7 +103,7 @@ prompt_git() {
   printf "${SOLAR_WHITE} on ${style_branch}${git_info}"
 }
 
-echo solarwhite ${SOLAR_WHITE}
+#echo solarwhite ${SOLAR_WHITE}
 # Set the terminal title to the current working directory
 PS1="\[\033]0;\w\007\]"
 # Build the prompt
@@ -119,4 +117,4 @@ PS1+="\$(prompt_git)" # Git details
 PS1+="\n" # Newline
 PS1+="${style_chars}\$ \[${RESET}\]" # $ (and reset color)
 
-echo $PS1
+#echo $PS1
