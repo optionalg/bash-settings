@@ -1,16 +1,19 @@
 #!/bin/echo "This file is meant to be sourced from the command or .bashrc"
 
+## vim, vi, nano
+
+editor_choice=vim
 
 ## if nano exists
-if [[ -x `which nano` ]] ; then
-export ASYNC_EDITOR="nano" 
-export EDITOR="nano -w" 
-export CVSEDITOR="nano -w" 
-export SVN_EDITOR="nano -w"
+if [[ -x `which ${editor_choice}` ]] ; then
+export ASYNC_EDITOR="${editor_choice}"
+export EDITOR="${editor_choice}" 
+export CVSEDITOR="${editor_choice}"
+export SVN_EDITOR="${editor_choice}"
 
 # common replacements
-alias pico='nano -w'
-alias e='nano -w'
+alias pico='${editor_choice}'
+alias e='${editor_choice}'
 
 fi
 
