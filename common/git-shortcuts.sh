@@ -2,6 +2,7 @@
 
 ##### Git shortcuts
 
+## use the github program if we have it
 if [[ -x `which hub 2>/dev/null` ]] ; then
 	# trying out 'hub'
 	alias git=hub
@@ -13,12 +14,14 @@ alias gs='git status; git submodule status'
 alias ga='git add'
 
 ##### quick commits
+alias gc='git commit -m'          ## add your own message as next argument
+alias gca='git commit -a -m'      ## all changed files, and ^^^
+alias gcaa='gca --amend'          ## amend previous commit and ^^^
 ## fancy, but needs a commit msg paramater. ex. gca "this is my commit"
 #alias gc='git commit -m'  #    (See function below) !!!! it's an actual function
 ## commit and autostage files
-alias gca='git commit -a'
+#alias gca='git commit -a'
 ## above and ammend previous commit
-alias gcaa='gca --amend'
 
 ## magic add _ALL_ and commit
 alias gcaA='echo "magic commit! are you sure?(YES to continue)" ; read CHK ; if [ $CHK = "YES" ] ; then ga -A && gca ; fi'
@@ -29,50 +32,36 @@ alias gull='git pull'
 alias gush='git push'
 #alias gp='git pull && git push'
 alias gp='gull && gush'
+#alias gull='git pull --rebase'
 
-alias gc='git commit -m'
-alias gca='git commit -a -m'
-alias gull='git pull --rebase'
-alias gush='git push'
+
+## fetching
 alias gf='git fetch'
+alias gfu='git fetch upstream'
 alias gm='git merge'
 
 alias gsh='git show'
 alias gl='git log'
 alias gb='git branch'
-alias gco='git checkout'
+alias gco='git checkout' ## append your own
 alias gd='git diff'
 
-alias gdiff='git diff'
-alias glog='git log' 
+## diff 
+alias gdiff='gd'
+## log history
+alias glog='gl' 
 
-alias gst='git stash'
+alias gst='git stash'         ## stash 
 alias gstp='git stash pop'
 
 alias gd1='echo "git diff HEAD";  git diff HEAD'
 alias gd2='echo "git diff HEAD^"; git diff HEAD^'
 alias grmall="git status | grep 'deleted:' | awk '{print \$3}' | xargs git rm -f"
 
-## simple push/pull on github
-alias githubpp=''
-
-# on my macbook pro only 'h', 'l', 'w', 'x' are reserved
-alias s='gs'
-alias a='ga'
-alias c='gc'
-alias ca='gca'
-alias u='gull'
-alias p='gush'
-alias g='gl'
-alias b='gb'
-alias o='gco'
-alias d='gd'
-alias d1='gd1'
-alias d2='gd2'
 
 # this command loads one letter aliases on demand
-#git_shortcuts_dir=`dirname $BASH_SOURCE`
-#alias gitoneletteraliases=". $git_shortcuts_dir/git-one-letter-aliases.sh"
+git_shortcuts_dir=`dirname $BASH_SOURCE`
+alias gitoneletteraliases=". $git_shortcuts_dir/git-one-letter-aliases.sh"
 
 # Git submodule shortcuts
 alias gsa='git submodule add'

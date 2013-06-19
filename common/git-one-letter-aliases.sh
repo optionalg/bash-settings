@@ -10,3 +10,4 @@ alias o='gco'
 alias d='gd'
 alias d1='gd1'
 alias d2='gd2'
+alias f='gf' # get fetch
