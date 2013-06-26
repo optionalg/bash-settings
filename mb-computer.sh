@@ -21,6 +21,7 @@ zour "$dir/common/terminal.sh"
 zour "$dir/common/mac.sh"
 #echo $dir
 zour "$dir/common/path.sh"
+zour "$dir/common/relogin.sh"
 #echo $dir
 zour "$dir/common/android-dev.sh"
 #echo $dir
